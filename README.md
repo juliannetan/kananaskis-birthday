@@ -1,6 +1,6 @@
-# Kananaskis Birthday
+# Yora Nordic Spa Birthday
 
-A private birthday invitation for Tyra: November 28, 2026, leaving Calgary around noon for Kananaskis Nordic Spa, dinner and a cozy overnight. RSVP is handled by a published Tally form, so guests do not need an account and static hosting does not require RSVP server endpoints.
+A private birthday invitation for Tyra: November 28, 2026, leaving Calgary around noon for Yora Nordic Spa Kananaskis (formerly Kananaskis Nordic Spa), dinner and a cozy overnight. RSVP is handled by a published Tally form, so guests do not need an account and static hosting does not require RSVP server endpoints.
 
 This project was built with [Lovable](https://lovable.dev).
 
