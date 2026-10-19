@@ -21,6 +21,11 @@ describe('Birthday invitation requirements', () => {
     expect(invitation.spaPassCad).toBe(173);
     expect(invitation.spaBookingUrl).toMatch(/^https:\/\/knordicspa\.com\//);
   });
+  it('points guests at the only passes left, the 4pm slots', () => {
+    expect(invitation.spaSlotHour).toBe(16);
+    expect(invitation.spaSlotLabel).toBe('4pm');
+    expect(invitation.spaSlotHour).toBeGreaterThan(invitation.arrivalHour);
+  });
   it('sends RSVP to the published Tally form', () => {
     expect(invitation.tallyUrl).toBe('https://tally.so/r/RWKekP');
   });
