@@ -15,5 +15,5 @@
 - [x] Copy softened to light and funny (no try-hard menace) + drive visual flipped: Calgary left, Kananaskis right
 - [x] Point the "Book the 4pm slot" button at the direct Nov 28 booking link (book.onagilysys.com), on the page and in the RSVP form
 - [x] Accommodation copy: split between the group, not decided yet, picked collectively — guests book their own spa pass, never say "handled" or "don't book a thing"
-- [ ] Rewrite invite + Tally wording: clear, simple, light humor (in progress)
-- [ ] Sunday Nov 29: maybe brunch or a hike, really loose — "whatever floats"
+- [x] Rewrite invite + Tally wording: clear, simple, light humor
+- [x] Sunday Nov 29: maybe brunch or a hike, really loose — "whatever floats"
