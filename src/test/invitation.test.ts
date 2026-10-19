@@ -17,6 +17,10 @@ describe('Birthday invitation requirements', () => {
   it('has accommodation handled by the hosts', () => {
     expect(invitation.accommodationHandled).toBe(true);
   });
+  it('tells guests to book the $173 spa pass themselves', () => {
+    expect(invitation.spaPassCad).toBe(173);
+    expect(invitation.spaBookingUrl).toMatch(/^https:\/\/knordicspa\.com\//);
+  });
   it('sends RSVP to the published Tally form', () => {
     expect(invitation.tallyUrl).toBe('https://tally.so/r/RWKekP');
   });
