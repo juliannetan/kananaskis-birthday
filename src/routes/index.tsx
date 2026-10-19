@@ -68,7 +68,7 @@ function Index() {
       <Journey />
 
       <section className="day-section page-width" id="the-day">
-        <div className="day-heading"><p className="eyebrow text-gold">November 28 → 29</p><h2>The plan.<br /><em>Locked in. Loosely.</em></h2><p>There’s a direction.<br />There’s no schedule.</p></div>
+        <div className="day-heading"><p className="eyebrow text-gold">November 28 → 29</p><h2>The plan.<br /><em>Vibe-based.</em></h2><p>There’s a direction.<br />There’s no schedule.</p></div>
         <ol className="timeline">{timeline.map(({ time, title, note, icon: Icon }, index) => <li key={title}><div className="timeline-mark"><Icon size={18} strokeWidth={1.3} aria-hidden="true" /></div><div className="timeline-content"><span className="timeline-time">{time}</span><h3>{title}</h3><p>{note}</p></div><span className="timeline-number">0{index + 1}</span></li>)}</ol>
       </section>
 
