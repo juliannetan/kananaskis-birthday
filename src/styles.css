@@ -104,7 +104,7 @@ p { line-height: 1.7; }
 .header-date { display: none; font-size: 11px; }
 .header-rsvp { color: var(--foreground); min-height: 44px; font-size: 12px; padding-inline: 10px; }
 .hero-content { position: relative; margin-top: auto; padding-top: 90px; padding-bottom: max(35px, calc(env(safe-area-inset-bottom) + 18px)); }
-.hero-content h1 { font-size: min(48px, 11.9vw); line-height: 1.04; max-width: 830px; }
+.hero-content h1 { font-size: min(48px, 11.9vw); line-height: 1.12; max-width: 830px; }
 .hero-content h1 em { color: var(--gold); }
 .hero-description { font-size: 16px; color: var(--foreground); margin-top: 24px; margin-bottom: 28px; }
 .invitation-button { min-height: 54px; border-radius: 2px; padding: 16px 24px; font-size: 13px; font-weight: 500; gap: 28px; box-shadow: none; }
@@ -199,7 +199,6 @@ p { line-height: 1.7; }
   .footer-spa { grid-column: auto; }
 }
 @media (max-width: 374px) {
-  .hero-content h1 { font-size: 46px; }
   .page-width { width: calc(100% - 36px); }
   .route-line h3 { font-size: 22px; }
 }
