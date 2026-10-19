@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { findRsvp, saveRsvp } from "@/lib/rsvp.functions";
 import hero from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -8,7 +10,7 @@ export const Route = createFileRoute("/")({
       { title: "A Birthday in the Mountains — Kananaskis Nordic Spa" },
       { name: "description", content: "Join us for a birthday day trip from Calgary to Kananaskis Nordic Spa. RSVP inside." },
       { property: "og:title", content: "A Birthday in the Mountains" },
-      { property: "og:description", content: "Calgary → Kananaskis Nordic Spa. Depart 10am. Stay as long as you like." },
+      { property: "og:description", content: "Calgary → Kananaskis Nordic Spa. Depart 10am, arrive ~11:15. Stay as long as you like." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -17,10 +19,10 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "10:00", title: "Depart Calgary", note: "We meet, load up, coffee in hand, and roll west on the Trans-Canada." },
-  { time: "10:30", title: "Foothills give way", note: "Prairie fades into rolling hills; the Rockies rise in the windshield." },
-  { time: "11:00", title: "Arrive at the spa", note: "Kananaskis Nordic Spa. Robes on, phones away." },
-  { time: "11:15", title: "Hot · Cold · Rest", note: "Steaming outdoor pools, cold plunges, saunas carved into the mountain air." },
+  { time: "10:00", title: "Depart Calgary", note: "We meet, load up, coffee in hand, and head west on the Trans-Canada (Hwy 1)." },
+  { time: "10:40", title: "Turn south onto Hwy 40", note: "About 50 km in, we leave the highway and follow the Kananaskis valley into the mountains." },
+  { time: "11:15", title: "Arrive at the spa", note: "Kananaskis Nordic Spa, Kananaskis Village. Robes on, phones away." },
+  { time: "11:30", title: "Hot · Cold · Rest", note: "Steaming outdoor pools, cold plunges, saunas carved into the mountain air." },
   { time: "13:00", title: "A slow lunch", note: "Something warm at the bistro, birthday toast included." },
   { time: "∞", title: "As long as you'd like", note: "No clock. Leave when you're melted. The mountains aren't going anywhere." },
 ];
@@ -65,85 +67,154 @@ function Index() {
       <Rsvp />
 
       <footer className="border-t border-border py-10 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
-        Calgary → Kananaskis · 1 hour · With love
+        Calgary → Kananaskis · 1 hr 15 min · With love
       </footer>
     </main>
   );
 }
 
 function Journey() {
-  const path = "M 60 220 C 260 220, 320 120, 520 140 S 820 60, 940 90";
+  const route = "M 920 200 C 760 200, 640 190, 520 170 C 420 150, 380 120, 300 110 C 230 100, 160 120, 90 95";
   return (
     <section className="border-y border-border bg-card py-24">
       <div className="mx-auto max-w-5xl px-6">
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">The drive</p>
-        <h2 className="mb-12 text-5xl">One hour west</h2>
-        <svg viewBox="0 0 1000 300" className="w-full">
-          <path d="M 0 300 L 0 250 L 400 250 L 560 160 L 640 200 L 760 90 L 860 170 L 920 120 L 1000 180 L 1000 300 Z" fill="var(--mist)" />
-          <path d="M 600 300 L 720 140 L 800 220 L 880 110 L 1000 230 L 1000 300 Z" fill="var(--mist)" />
-          <path d={path} fill="none" stroke="var(--gold)" strokeWidth="2" strokeDasharray="6 8" />
-          <circle cx="60" cy="220" r="7" fill="var(--gold)" />
-          <circle cx="940" cy="90" r="7" fill="var(--gold)" />
-          <text x="60" y="260" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Calgary · 10:00</text>
-          <text x="940" y="60" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Nordic Spa · 11:00</text>
+        <h2 className="mb-12 text-5xl">West into the Rockies</h2>
+        <svg viewBox="0 0 1000 280" className="w-full">
+          <path d="M 0 280 L 0 120 L 70 60 L 140 130 L 220 40 L 300 120 L 380 70 L 470 170 L 560 220 L 1000 230 L 1000 280 Z" fill="var(--mist)" />
+          <path d="M 0 280 L 0 170 L 110 90 L 190 170 L 260 100 L 360 200 L 1000 250 L 1000 280 Z" fill="var(--mist)" />
+          <path d={route} fill="none" stroke="var(--gold)" strokeWidth="2" strokeDasharray="6 8" />
+          <circle cx="920" cy="200" r="7" fill="var(--gold)" />
+          <circle cx="90" cy="95" r="7" fill="var(--gold)" />
+          <text x="920" y="240" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Calgary · 10:00</text>
+          <text x="520" y="205" fill="var(--muted-foreground)" fontSize="14" textAnchor="middle">Hwy 1 → Hwy 40</text>
+          <text x="110" y="60" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Nordic Spa · 11:15</text>
+          <text x="960" y="30" fill="var(--muted-foreground)" fontSize="12" textAnchor="end" letterSpacing="3">W ← → E</text>
           {[0, 1, 2].map((i) => (
-            <circle key={i} cx={930 + i * 10} cy="80" r="4" fill="var(--foreground)" className="animate-steam" style={{ animationDelay: `${i * 1.2}s` }} />
+            <circle key={i} cx={80 + i * 10} cy="85" r="4" fill="var(--foreground)" className="animate-steam" style={{ animationDelay: `${i * 1.2}s` }} />
           ))}
-          <g style={{ offsetPath: `path("${path}")`, animation: "drive 6s ease-in-out infinite alternate" }}>
+          <g style={{ offsetPath: `path("${route}")`, offsetRotate: "0deg", animation: "drive 7s ease-in-out infinite alternate" }}>
             <rect x="-14" y="-8" width="28" height="14" rx="4" fill="var(--gold)" />
           </g>
         </svg>
-        <div className="mt-10 grid gap-8 text-sm md:grid-cols-3">
-          <div><div className="font-display text-3xl text-gold">~95 km</div><p className="text-muted-foreground">Trans-Canada Hwy 1 west</p></div>
-          <div><div className="font-display text-3xl text-gold">1 hr</div><p className="text-muted-foreground">Mountains the whole way</p></div>
+        <div className="mt-12 grid gap-8 text-sm md:grid-cols-3">
+          <div><div className="font-display text-3xl text-gold">~100 km</div><p className="text-muted-foreground">Hwy 1 west, then Hwy 40 south</p></div>
+          <div><div className="font-display text-3xl text-gold">1 hr 15 min</div><p className="text-muted-foreground">In clear conditions, from central Calgary</p></div>
           <div><div className="font-display text-3xl text-gold">Carpool</div><p className="text-muted-foreground">We'll sort rides together</p></div>
         </div>
+        <div className="mt-12 overflow-hidden border border-border">
+          <iframe
+            title="Driving route from Calgary to Kananaskis Nordic Spa"
+            src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Kananaskis+Nordic+Spa,+Kananaskis+Village,+AB&output=embed"
+            className="h-[420px] w-full"
+            loading="lazy"
+          />
+        </div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Kananaskis+Nordic+Spa" target="_blank" rel="noreferrer" className="mt-4 inline-block text-xs uppercase tracking-[0.3em] text-gold">
+          Open directions in Google Maps →
+        </a>
       </div>
     </section>
   );
 }
 
+type Form = { email: string; first_name: string; last_name: string; attending: boolean; departure_works: boolean; preferred_time: string };
+const empty: Form = { email: "", first_name: "", last_name: "", attending: true, departure_works: true, preferred_time: "" };
+
 function Rsvp() {
-  const [sent, setSent] = useState(false);
-  const [coming, setComing] = useState<string>("yes");
+  const find = useServerFn(findRsvp);
+  const save = useServerFn(saveRsvp);
+  const [f, setF] = useState<Form>(empty);
+  const [step, setStep] = useState<"form" | "lookup" | "sent">("form");
+  const [editing, setEditing] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState("");
+  const set = <K extends keyof Form>(k: K, v: Form[K]) => setF((p) => ({ ...p, [k]: v }));
+
+  async function lookup(e: React.FormEvent) {
+    e.preventDefault(); setBusy(true); setMsg("");
+    try {
+      const r = await find({ data: { email: f.email } });
+      if (!r) { setMsg("We couldn't find an RSVP for that email. You can send a new one below."); setStep("form"); }
+      else {
+        setF({ email: r.email, first_name: r.first_name, last_name: r.last_name, attending: r.attending, departure_works: r.departure_works ?? true, preferred_time: r.preferred_time ?? "" });
+        setEditing(true); setStep("form");
+      }
+    } catch { setMsg("Please enter a valid email."); } finally { setBusy(false); }
+  }
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault(); setBusy(true); setMsg("");
+    try {
+      await save({ data: {
+        email: f.email, first_name: f.first_name, last_name: f.last_name, attending: f.attending,
+        departure_works: f.attending ? f.departure_works : null,
+        preferred_time: f.attending && !f.departure_works ? f.preferred_time || null : null,
+      } });
+      setStep("sent");
+    } catch { setMsg("Something didn't go through. Please check your details and try again."); } finally { setBusy(false); }
+  }
+
+  const input = "mt-2 w-full border-b border-input bg-transparent py-3 text-xl outline-none focus:border-gold";
+  const label = "text-xs uppercase tracking-[0.3em] text-muted-foreground";
+
   return (
     <section id="rsvp" className="mx-auto max-w-2xl px-6 py-28">
       <p className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">RSVP</p>
-      <h2 className="mb-4 text-5xl">Will you join us?</h2>
+      <h2 className="mb-4 text-5xl">{editing ? "Update your RSVP" : "Will you join us?"}</h2>
       <p className="mb-12 text-muted-foreground">We'd truly love to have you there.</p>
-      {sent ? (
+
+      {step === "sent" ? (
         <div className="border border-gold p-10 text-center">
-          <h3 className="text-3xl text-gold">{coming === "no" ? "We'll miss you." : "See you in the mountains."}</h3>
-          <p className="mt-3 text-muted-foreground">Thank you for letting us know.</p>
+          <h3 className="text-3xl text-gold">{f.attending ? "See you in the mountains." : "We'll miss you."}</h3>
+          <p className="mt-3 text-muted-foreground">Thank you, {f.first_name}. Need to change something? Come back and use your email.</p>
+          <button onClick={() => { setStep("form"); setEditing(true); }} className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">Edit my RSVP</button>
         </div>
-      ) : (
-        <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-8">
-          <label className="block">
-            <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Your name</span>
-            <input required className="mt-2 w-full border-b border-input bg-transparent py-3 text-xl outline-none focus:border-gold" />
+      ) : step === "lookup" ? (
+        <form onSubmit={lookup} className="space-y-8">
+          <label className="block"><span className={label}>Email you RSVP'd with</span>
+            <input type="email" required value={f.email} onChange={(e) => set("email", e.target.value)} className={input} />
           </label>
-          <Choice label="Can you come?" value={coming} onChange={setComing} options={[["yes", "Yes, I'm in"], ["no", "Sadly, no"]]} />
-          {coming === "yes" && (
-            <TimeChoice />
+          {msg && <p className="text-sm text-muted-foreground">{msg}</p>}
+          <button disabled={busy} className="w-full bg-primary py-4 text-sm uppercase tracking-[0.3em] text-primary-foreground transition hover:opacity-90 disabled:opacity-50">
+            {busy ? "Finding…" : "Find my RSVP"}
+          </button>
+          <button type="button" onClick={() => setStep("form")} className="w-full text-xs uppercase tracking-[0.3em] text-muted-foreground">Back</button>
+        </form>
+      ) : (
+        <form onSubmit={submit} className="space-y-8">
+          {!editing && (
+            <button type="button" onClick={() => { setStep("lookup"); setMsg(""); }} className="text-xs uppercase tracking-[0.3em] text-gold">
+              Already RSVP'd? Edit it with your email →
+            </button>
           )}
-          <button className="w-full bg-primary py-4 text-sm uppercase tracking-[0.3em] text-primary-foreground transition hover:opacity-90">
-            Send RSVP
+          <div className="grid gap-8 md:grid-cols-2">
+            <label className="block"><span className={label}>First name</span>
+              <input required maxLength={100} value={f.first_name} onChange={(e) => set("first_name", e.target.value)} className={input} />
+            </label>
+            <label className="block"><span className={label}>Last name</span>
+              <input required maxLength={100} value={f.last_name} onChange={(e) => set("last_name", e.target.value)} className={input} />
+            </label>
+          </div>
+          <label className="block"><span className={label}>Email</span>
+            <input type="email" required maxLength={255} readOnly={editing} value={f.email} onChange={(e) => set("email", e.target.value)} className={input} />
+          </label>
+          <Choice label="Can you come?" value={f.attending ? "yes" : "no"} onChange={(v) => set("attending", v === "yes")} options={[["yes", "Yes, I'm in"], ["no", "Sadly, no"]]} />
+          {f.attending && (
+            <>
+              <Choice label="Does a 10am departure from Calgary work?" value={f.departure_works ? "works" : "other"} onChange={(v) => set("departure_works", v === "works")} options={[["works", "10am is perfect"], ["other", "I need a different time"]]} />
+              {!f.departure_works && (
+                <input placeholder="What time works for you?" maxLength={200} value={f.preferred_time} onChange={(e) => set("preferred_time", e.target.value)} className={input} />
+              )}
+            </>
+          )}
+          {msg && <p className="text-sm text-muted-foreground">{msg}</p>}
+          <button disabled={busy} className="w-full bg-primary py-4 text-sm uppercase tracking-[0.3em] text-primary-foreground transition hover:opacity-90 disabled:opacity-50">
+            {busy ? "Sending…" : editing ? "Update RSVP" : "Send RSVP"}
           </button>
         </form>
       )}
     </section>
-  );
-}
-
-function TimeChoice() {
-  const [v, setV] = useState("works");
-  return (
-    <>
-      <Choice label="Does a 10am departure from Calgary work?" value={v} onChange={setV} options={[["works", "10am is perfect"], ["other", "I need a different time"]]} />
-      {v === "other" && (
-        <input placeholder="What time works for you?" className="w-full border-b border-input bg-transparent py-3 outline-none focus:border-gold" />
-      )}
-    </>
   );
 }
 
