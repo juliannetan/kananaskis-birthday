@@ -7,9 +7,9 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "A Birthday in the Mountains — Kananaskis Nordic Spa" },
-      { name: "description", content: "Join us for a birthday day trip from Calgary to Kananaskis Nordic Spa. RSVP inside." },
-      { property: "og:title", content: "A Birthday in the Mountains" },
+      { title: "Tyra Turns Another Year — Spa Day in Kananaskis" },
+      { name: "description", content: "Tyra's birthday: we're driving to Kananaskis Nordic Spa to boil ourselves like dumplings. RSVP inside." },
+      { property: "og:title", content: "Tyra's Birthday Spa Day" },
       { property: "og:description", content: "Calgary → Kananaskis Nordic Spa. Depart 10am, arrive ~11:15. Stay as long as you like." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -19,12 +19,12 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "10:00", title: "Depart Calgary", note: "We meet, load up, coffee in hand, and head west on the Trans-Canada (Hwy 1)." },
-  { time: "10:40", title: "Turn south onto Hwy 40", note: "About 50 km in, we leave the highway and follow the Kananaskis valley into the mountains." },
-  { time: "11:15", title: "Arrive at the spa", note: "Kananaskis Nordic Spa, Kananaskis Village. Robes on, phones away." },
-  { time: "11:30", title: "Hot · Cold · Rest", note: "Steaming outdoor pools, cold plunges, saunas carved into the mountain air." },
-  { time: "13:00", title: "A slow lunch", note: "Something warm at the bistro, birthday toast included." },
-  { time: "∞", title: "As long as you'd like", note: "No clock. Leave when you're melted. The mountains aren't going anywhere." },
+  { time: "10:00", title: "Depart Calgary", note: "Be on time. Yes, you. Grab an iced coffee, claim shotgun, argue about the aux, and head west on Hwy 1." },
+  { time: "10:40", title: "Turn south onto Hwy 40", note: "Someone asks 'are we there yet.' Someone needs to pee. Mountains appear and everyone suddenly goes quiet and spiritual." },
+  { time: "11:15", title: "Arrive at the spa", note: "Robes on. Phones away (after one group pic for the ’gram)." },
+  { time: "11:30", title: "Hot · Cold · Scream", note: "Boil in the hot pool, shriek in the cold plunge, pretend to meditate in the sauna. Repeat until you've forgotten your emails." },
+  { time: "13:00", title: "A slow lunch", note: "Snacks, drinks, and an emotional birthday toast to Tyra that goes on slightly too long." },
+  { time: "∞", title: "As long as you'd like", note: "No curfew. Leave when you're a noodle. Nap in the car on the way home (unless you're driving, obviously)." },
 ];
 
 function Index() {
@@ -34,12 +34,12 @@ function Index() {
         <img src={hero} alt="Steaming outdoor pools among snowy pines in Kananaskis" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <div className="veil absolute inset-0" />
         <div className="relative mx-auto w-full max-w-5xl px-6 pb-24 animate-rise">
-          <p className="mb-6 text-xs uppercase tracking-[0.4em] text-gold">You're invited</p>
+          <p className="mb-6 text-xs uppercase tracking-[0.4em] text-gold">Mandatory fun · Tyra's birthday</p>
           <h1 className="text-6xl leading-[0.95] md:text-8xl">
-            A birthday<br /><em className="text-gold">in the mountains</em>
+            Tyra's getting older.<br /><em className="text-gold">We're getting steamed.</em>
           </h1>
           <p className="mt-8 max-w-lg text-lg text-muted-foreground">
-            We're stealing our friend away for a day of heat, steam and stillness at Kananaskis Nordic Spa — and it wouldn't be the same without you.
+            We're hauling the birthday girl to Kananaskis Nordic Spa to sweat out last weekend's bad decisions. It's healing. It's cheap therapy. It's not the same without you, you absolute menace.
           </p>
           <a href="#rsvp" className="mt-10 inline-block border border-gold px-8 py-4 text-sm uppercase tracking-[0.3em] text-gold transition hover:bg-primary hover:text-primary-foreground">
             RSVP
@@ -67,7 +67,7 @@ function Index() {
       <Rsvp />
 
       <footer className="border-t border-border py-10 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
-        Calgary → Kananaskis · 1 hr 15 min · With love
+        Calgary → Kananaskis · 1 hr 15 min · Happy birthday, Tyra
       </footer>
     </main>
   );
@@ -161,12 +161,12 @@ function Rsvp() {
   return (
     <section id="rsvp" className="mx-auto max-w-2xl px-6 py-28">
       <p className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">RSVP</p>
-      <h2 className="mb-4 text-5xl">{editing ? "Update your RSVP" : "Will you join us?"}</h2>
-      <p className="mb-12 text-muted-foreground">We'd truly love to have you there.</p>
+      <h2 className="mb-4 text-5xl">{editing ? "Update your RSVP" : "You coming or what?"}</h2>
+      <p className="mb-12 text-muted-foreground">Tyra deserves this. Frankly, so do you.</p>
 
       {step === "sent" ? (
         <div className="border border-gold p-10 text-center">
-          <h3 className="text-3xl text-gold">{f.attending ? "See you in the mountains." : "We'll miss you."}</h3>
+          <h3 className="text-3xl text-gold">{f.attending ? "Pack your swimsuit, degenerate." : "Fine. We'll talk about you in the hot tub."}</h3>
           <p className="mt-3 text-muted-foreground">Thank you, {f.first_name}. Need to change something? Come back and use your email.</p>
           <button onClick={() => { setStep("form"); setEditing(true); }} className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">Edit my RSVP</button>
         </div>
@@ -199,10 +199,10 @@ function Rsvp() {
           <label className="block"><span className={label}>Email</span>
             <input type="email" required maxLength={255} readOnly={editing} value={f.email} onChange={(e) => set("email", e.target.value)} className={input} />
           </label>
-          <Choice label="Can you come?" value={f.attending ? "yes" : "no"} onChange={(v) => set("attending", v === "yes")} options={[["yes", "Yes, I'm in"], ["no", "Sadly, no"]]} />
+          <Choice label="Can you come?" value={f.attending ? "yes" : "no"} onChange={(v) => set("attending", v === "yes")} options={[["yes", "Obviously I'm in"], ["no", "I'm a coward (no)"]]} />
           {f.attending && (
             <>
-              <Choice label="Does a 10am departure from Calgary work?" value={f.departure_works ? "works" : "other"} onChange={(v) => set("departure_works", v === "works")} options={[["works", "10am is perfect"], ["other", "I need a different time"]]} />
+              <Choice label="Does a 10am departure from Calgary work?" value={f.departure_works ? "works" : "other"} onChange={(v) => set("departure_works", v === "works")} options={[["works", "10am, I'll be there"], ["other", "10am?? Be serious"]]} />
               {!f.departure_works && (
                 <input placeholder="What time works for you?" maxLength={200} value={f.preferred_time} onChange={(e) => set("preferred_time", e.target.value)} className={input} />
               )}
