@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Tyra’s Birthday · November 28 — Fun Is the Way" },
-      { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around noon, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
+      { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around 2pm, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
       { property: "og:title", content: "Tyra’s Birthday — A Little Older. A Lot More Relaxed." },
       { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with our favourite degenerates. Accommodation handled. RSVP with Tally." },
       { property: "og:type", content: "website" },
@@ -22,8 +22,8 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "Around noon", title: "The great escape", icon: Car, note: "Leave Calgary and head west. Playlist on, mountains getting closer. Can’t make noon? We’ll be waiting for you at the spa." },
-  { time: "~1:15 pm", title: "Enter robe mode", icon: Waves, note: "Arrive at Yora Nordic Spa. Hot pool, cold plunge, sauna, repeat. Stay as long as you like — no rushing the relaxation." },
+  { time: "Around 2pm", title: "The great escape", icon: Car, note: "Leave Calgary and head west. Straight shot, playlist on, mountains getting closer. Can’t make 2pm? We’ll be waiting for you at the spa." },
+  { time: "By 3:30pm", title: "Enter robe mode", icon: Waves, note: "Arrive at Yora Nordic Spa. Hot pool, cold plunge, sauna, repeat. Stay as long as you like — no rushing the relaxation." },
   { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "Accommodation is taken care of. Don’t book a thing. Drop your bags and settle into aggressively cozy mode." },
   { time: "Later that evening", title: "Dinner & birthday slander", icon: Check, note: "Good food, a low-key toast to Tyra, and a suspicious amount of laughing. Dinner spot still being decided." },
   { time: "Sunday, November 29", title: "A very slow goodbye", icon: Coffee, note: "Coffee. Pajamas. A gentle return to society. Check out and head home when it’s time." },
@@ -56,7 +56,7 @@ function Index() {
 
       <section id="the-plan" className="intro-section page-width">
         <div><p className="eyebrow text-gold">Less party. More pool.</p><h2>Good company.<br /><em>Questionable decisions.</em></h2></div>
-        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis to sweat out a year of bad decisions. Consider this our attempt at being wellness people.</p><p>Leave Calgary around noon. Soak until we forget what day it is. Then dinner, a cozy overnight, and absolutely no alarm-clock energy. It’s not the same without you, you absolute menace.</p><span className="tiny-signoff">With love, your fellow degenerates</span></div>
+        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis to sweat out a year of bad decisions. Consider this our attempt at being wellness people.</p><p>Leave Calgary around 2pm. Soak until we forget what day it is. Then dinner, a cozy overnight, and absolutely no alarm-clock energy. It’s not the same without you, you absolute menace.</p><span className="tiny-signoff">With love, your fellow degenerates</span></div>
       </section>
 
       <section className="spa-gallery" aria-label="Winter spa scenes">
