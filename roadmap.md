@@ -1,4 +1,6 @@
 - [x] RSVP saving + edit by email
 - [x] Westward drive visual, real map, 1h15 timing
 - [x] Funny degenerate tone, birthday girl Tyra
+- [x] Accommodation taken care of by hosts — page says guests book nothing
+- [ ] Dinner venue + time (waiting on owner)
 - [ ] Owner email notifications to juliannemtan@gmail.com (blocked: needs a verified email domain)

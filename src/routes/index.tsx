@@ -65,7 +65,7 @@ function Index() {
           ))}
         </ol>
         <div className="mt-6 border border-border bg-card p-6 text-sm text-muted-foreground">
-          <span className="text-gold">Where we're staying:</span> the accommodation and the dinner spot are still up in the air. RSVP and we'll send you the address, the room split, and the dinner reservation once they're locked.
+          <span className="text-gold">Where we're staying:</span> the accommodation is taken care of — we've got it, so don't book a thing and don't bring a pillow. Show up with a swimsuit and your worst decisions. The dinner spot is still being argued over; RSVP and we'll send you the address and the reservation time once it's locked.
         </div>
       </section>
 
