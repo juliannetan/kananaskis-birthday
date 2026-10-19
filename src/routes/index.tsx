@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       { title: "Tyra’s Birthday · November 28 — Fun Is the Way" },
       { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around 2pm, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
       { property: "og:title", content: "Tyra’s Birthday — A Little Older. A Lot More Relaxed." },
-      { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with good company. Accommodation handled. RSVP with Tally." },
+      { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with good company. Accommodation split between the crew. RSVP with Tally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 const timeline = [
   { time: "Around 2pm", title: "Out we go", icon: Car, note: "Leave Calgary and head west. Playlist on, mountains getting closer. Can’t make 2pm? No worries — we’ll be waiting at the spa." },
   { time: "By 3:30pm", title: "Robes on", icon: Waves, note: "Arrive at Yora Nordic Spa and slide into the 4pm session. Hot pool, cold plunge, sauna, repeat. Stay as long as you like. (Only 4pm passes are left, so grab yours now — refundable up to 24 hours before.)" },
-  { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "Accommodation is taken care of — don’t book a thing. Drop your bags and get comfortable." },
+  { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "The accommodation is split between us and still being picked — we’ll decide together. Drop your bags and get comfortable." },
   { time: "Later that evening", title: "Dinner & a toast to Tyra", icon: Check, note: "Good food, a short toast, and far too much laughing. Dinner spot still being decided." },
   { time: "Sunday, November 29", title: "A very slow goodbye", icon: Coffee, note: "Coffee. Pajamas. Check out and head home when you’re ready." },
 ];
@@ -71,7 +71,7 @@ function Index() {
         <ol className="timeline">{timeline.map(({ time, title, note, icon: Icon }, index) => <li key={title}><div className="timeline-mark"><Icon size={18} strokeWidth={1.3} aria-hidden="true" /></div><div className="timeline-content"><span className="timeline-time">{time}</span><h3>{title}</h3><p>{note}</p></div><span className="timeline-number">0{index + 1}</span></li>)}</ol>
       </section>
 
-      <section className="overnight-section"><img src={night.url} alt="Warmly lit sauna buildings and outdoor pools at Yora Nordic Spa in the evening" width={1024} height={683} loading="lazy" /><div className="overnight-veil" /><div className="page-width overnight-content"><p className="eyebrow text-gold">Stay a little longer</p><h2>No rush.<br /><em>No drive home tonight.</em></h2><p>The accommodation is taken care of.<br />You bring a swimsuit. That’s it.</p><div className="overnight-note"><Check size={16} /> Accommodation handled. Guests book nothing.</div></div></section>
+      <section className="overnight-section"><img src={night.url} alt="Warmly lit sauna buildings and outdoor pools at Yora Nordic Spa in the evening" width={1024} height={683} loading="lazy" /><div className="overnight-veil" /><div className="page-width overnight-content"><p className="eyebrow text-gold">Stay a little longer</p><h2>No rush.<br /><em>No drive home tonight.</em></h2><p>The accommodation is split between us.<br />Not picked yet — we’ll decide together.</p><div className="overnight-note"><Check size={16} /> You book the spa pass. The rest we sort together.</div></div></section>
 
       <section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><p className="eyebrow text-gold">Save your spot</p><h2>You coming<br /><em>or what?</em></h2><p>Tyra deserves this. Frankly, so do you. All we need from you is an RSVP.</p><RsvpLink>Count me in (or out)</RsvpLink><span className="rsvp-date">NOVEMBER 28 · AROUND 2PM · LET’S MAKE THIS WEEKEND MEMORABLE</span><div className="spa-pass-note"><strong>The spa pass is $173 per person, booked directly with Yora.</strong> The only passes left right now are the 4pm slots, so grab one the moment you’re in — it’s fully refundable up to 24 hours before, so a “maybe” has nothing to lose. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 

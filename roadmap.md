@@ -13,4 +13,5 @@
 - [x] Re-timed the day: leave Calgary around 2pm, at the spa by 3:30pm (no rush), check in to accommodation, birthday dinner; accommodation taken care of; RSVP is the only ask; "let's make this weekend memorable"
 - [x] Spa pass urgency: only the 4pm slots are left — page and Tally form both say book 4pm ASAP
 - [x] Copy softened to light and funny (no try-hard menace) + drive visual flipped: Calgary left, Kananaskis right
-- [ ] Point the "Book the 4pm slot" button at the direct Nov 28 booking link (book.onagilysys.com), on the page and in the RSVP form
+- [x] Point the "Book the 4pm slot" button at the direct Nov 28 booking link (book.onagilysys.com), on the page and in the RSVP form
+- [ ] Accommodation copy: split between the group, not decided yet, picked collectively — guests book their own spa pass, never say "handled" or "don't book a thing"
