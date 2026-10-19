@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "Around noon", title: "The great escape", icon: Car, note: "Coffee acquired. Aux privileges disputed. Leave Calgary and head west. Can’t make noon? We’ll be waiting for you at the spa." },
+  { time: "Around noon", title: "The great escape", icon: Car, note: "Leave Calgary and head west. Playlist on, mountains getting closer. Can’t make noon? We’ll be waiting for you at the spa." },
   { time: "~1:15 pm", title: "Enter robe mode", icon: Waves, note: "Arrive at Kananaskis Nordic Spa. Hot pool, cold plunge, sauna, repeat. Stay as long as you like — no rushing the relaxation." },
   { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "Accommodation is taken care of. Don’t book a thing. Drop your bags and settle into aggressively cozy mode." },
   { time: "Later that evening", title: "Dinner & birthday slander", icon: Check, note: "Good food, a low-key toast to Tyra, and a suspicious amount of laughing. Dinner spot still being decided." },
