@@ -61,7 +61,7 @@ function Index() {
       </section>
 
       <section className="spa-gallery" aria-label="Winter spa scenes">
-        <figure className="gallery-main"><img src={spaPools} alt="Steam rising from tiered outdoor thermal pools in a snowy mountain valley at sunset" width={768} height={1152} loading="lazy" /><figcaption><span className="eyebrow">Core memory loading</span><span>Hot. Cold. Zero thoughts.</span></figcaption></figure>
+        <figure className="gallery-main"><img src={spaPools} alt="Steam rising from tiered outdoor thermal pools in a snowy mountain valley at sunset" width={768} height={1152} loading="lazy" /><figcaption><span className="eyebrow">Core memory loading</span><span>Pools, but make it fashion.</span></figcaption></figure>
         <figure className="gallery-side"><img src={spaChute} alt="A wooden water chute pouring into a snow-ringed hot tub beside a steam cabin at dusk" width={768} height={1152} loading="lazy" /><figcaption>The cold plunge hits different.<br />Allegedly.</figcaption></figure>
       </section>
 
@@ -76,7 +76,7 @@ function Index() {
 
       <section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><p className="eyebrow text-gold">Save your spot</p><h2>You coming<br /><em>or what?</em></h2><p>Tyra deserves this. Frankly, so do you. All we need from you is an RSVP — that’s the whole ask.</p><RsvpLink>Count me in (or out)</RsvpLink><span className="rsvp-date">NOVEMBER 28 · AROUND 2PM · LET’S MAKE THIS WEEKEND MEMORABLE</span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 
-      <footer className="site-footer page-width"><div className="footer-main"><a href="#" className="wordmark">fun is<br /><span>the way.</span></a><p>Made for Tyra.<br />And the people who make life fun.</p><a href="https://knordicspa.com/" target="_blank" rel="noreferrer" className="footer-spa">Yora Nordic Spa Kananaskis <ArrowUpRight size={14} /></a></div><div className="photo-credits">Evening photo: Rebecca Hardcastle · Explore Kananaskis<br />The other scenes were made for this invitation. A private birthday invite — not affiliated with Yora Nordic Spa Kananaskis (formerly Kananaskis Nordic Spa).</div></footer>
+      <footer className="site-footer page-width"><div className="footer-main"><a href="#" className="wordmark">fun is<br /><span>the way.</span></a><p>Made for Tyra.<br />And the people who make life fun.</p><a href="https://knordicspa.com/" target="_blank" rel="noreferrer" className="footer-spa">Yora Nordic Spa Kananaskis <ArrowUpRight size={14} /></a></div></footer>
     </main>
   );
 }
