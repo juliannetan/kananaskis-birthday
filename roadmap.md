@@ -11,3 +11,4 @@
 - [x] Fix "sweat out last weekend's bad decisions" — now reads "a year of bad decisions"
 - [x] Mobile-first polish: spa photos stacked full-width on phones, small grey notes enlarged and darkened, hero bottom protected from the iPhone home bar
 - [x] Re-timed the day: leave Calgary around 2pm, at the spa by 3:30pm (no rush), check in to accommodation, birthday dinner; accommodation taken care of; RSVP is the only ask; "let's make this weekend memorable"
+- [x] Spa pass urgency: only the 4pm slots are left — page and Tally form both say book 4pm ASAP
