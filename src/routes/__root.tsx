@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { title: "Fun Is the Way — Tyra’s Birthday" },
-      { name: "description", content: "Tyra’s birthday escape to Kananaskis Nordic Spa, November 28, 2026." },
+      { name: "description", content: "Tyra’s birthday escape to Yora Nordic Spa Kananaskis, November 28, 2026." },
       { property: "og:title", content: "Fun Is the Way — Tyra’s Birthday" },
       { property: "og:description", content: "A mountain escape with our favourite people." },
       { property: "og:type", content: "website" },
