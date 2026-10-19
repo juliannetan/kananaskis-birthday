@@ -8,9 +8,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Tyra Turns Another Year — Spa Day in Kananaskis" },
-      { name: "description", content: "Tyra's birthday: we're driving to Kananaskis Nordic Spa to boil ourselves like dumplings. RSVP inside." },
+      { name: "description", content: "Tyra's birthday: 2pm out of Calgary, spa all day, then dinner and a sleepover. RSVP inside." },
       { property: "og:title", content: "Tyra's Birthday Spa Day" },
-      { property: "og:description", content: "Calgary → Kananaskis Nordic Spa. Depart 10am, arrive ~11:15. Stay as long as you like." },
+      { property: "og:description", content: "Calgary → Kananaskis Nordic Spa. Depart 2pm, arrive ~3:15. Stay all day, then dinner and the accommodation." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -19,12 +19,14 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "10:00", title: "Depart Calgary", note: "Be on time. Yes, you. Grab an iced coffee, claim shotgun, argue about the aux, and head west on Hwy 1." },
-  { time: "10:40", title: "Turn south onto Hwy 40", note: "Someone asks 'are we there yet.' Someone needs to pee. Mountains appear and everyone suddenly goes quiet and spiritual." },
-  { time: "11:15", title: "Arrive at the spa", note: "Robes on. Phones away (after one group pic for the ’gram)." },
-  { time: "11:30", title: "Hot · Cold · Scream", note: "Boil in the hot pool, shriek in the cold plunge, pretend to meditate in the sauna. Repeat until you've forgotten your emails." },
-  { time: "13:00", title: "A slow lunch", note: "Snacks, drinks, and an emotional birthday toast to Tyra that goes on slightly too long." },
-  { time: "∞", title: "As long as you'd like", note: "No curfew. Leave when you're a noodle. Nap in the car on the way home (unless you're driving, obviously)." },
+  { time: "2:00pm", title: "Depart Calgary", note: "Be on time. Yes, you. Grab an iced coffee, claim shotgun, argue about the aux, and head west on Hwy 1." },
+  { time: "2:40pm", title: "Turn south onto Hwy 40", note: "Someone asks 'are we there yet.' Someone needs to pee. Mountains appear and everyone suddenly goes quiet and spiritual." },
+  { time: "3:15pm", title: "Arrive at the spa", note: "Robes on. Phones away (after one group pic for the ’gram)." },
+  { time: "3:30pm", title: "Hot · Cold · Scream", note: "Boil in the hot pool, shriek in the cold plunge, pretend to meditate in the sauna. Repeat until you've forgotten your emails." },
+  { time: "All day", title: "No rush, no curfew", note: "Stay as long as you like. Nap, sweat, lose track of time in the steam, and plot the next group trip like the degenerates you are." },
+  { time: "7:30pm", title: "Check in to the accommodation", note: "Drop the bags, change out of our swimsuits, and pretend we're well-rested adults for approximately five minutes." },
+  { time: "8:30pm", title: "Dinner", note: "A big table, far too much food, and an emotional birthday toast to Tyra that goes on slightly too long." },
+  { time: "Next day", title: "Slow morning, then check out", note: "Coffee, a last argument about who hogged the good pillows, and we're out before the rooms are due." },
 ];
 
 function Index() {
@@ -86,9 +88,9 @@ function Journey() {
           <path d={route} fill="none" stroke="var(--gold)" strokeWidth="2" strokeDasharray="6 8" />
           <circle cx="920" cy="200" r="7" fill="var(--gold)" />
           <circle cx="90" cy="95" r="7" fill="var(--gold)" />
-          <text x="920" y="240" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Calgary · 10:00</text>
+          <text x="920" y="240" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Calgary · 2:00pm</text>
           <text x="520" y="205" fill="var(--muted-foreground)" fontSize="14" textAnchor="middle">Hwy 1 → Hwy 40</text>
-          <text x="110" y="60" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Nordic Spa · 11:15</text>
+          <text x="110" y="60" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Nordic Spa · 3:15pm</text>
           <text x="960" y="30" fill="var(--muted-foreground)" fontSize="12" textAnchor="end" letterSpacing="3">W ← → E</text>
           {[0, 1, 2].map((i) => (
             <circle key={i} cx={80 + i * 10} cy="85" r="4" fill="var(--foreground)" className="animate-steam" style={{ animationDelay: `${i * 1.2}s` }} />
@@ -202,7 +204,7 @@ function Rsvp() {
           <Choice label="Can you come?" value={f.attending ? "yes" : "no"} onChange={(v) => set("attending", v === "yes")} options={[["yes", "Obviously I'm in"], ["no", "I'm a coward (no)"]]} />
           {f.attending && (
             <>
-              <Choice label="Does a 10am departure from Calgary work?" value={f.departure_works ? "works" : "other"} onChange={(v) => set("departure_works", v === "works")} options={[["works", "10am, I'll be there"], ["other", "10am?? Be serious"]]} />
+              <Choice label="Does a 2pm departure from Calgary work?" value={f.departure_works ? "works" : "other"} onChange={(v) => set("departure_works", v === "works")} options={[["works", "2pm, I'll be there"], ["other", "2pm?? Be serious"]]} />
               {!f.departure_works && (
                 <input placeholder="What time works for you?" maxLength={200} value={f.preferred_time} onChange={(e) => set("preferred_time", e.target.value)} className={input} />
               )}
