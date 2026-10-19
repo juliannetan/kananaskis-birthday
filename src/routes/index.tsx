@@ -41,7 +41,7 @@ function Index() {
             Tyra's getting older.<br /><em className="text-gold">We're getting steamed.</em>
           </h1>
           <p className="mt-8 max-w-lg text-lg text-muted-foreground">
-            We're hauling the birthday girl to Kananaskis Nordic Spa to sweat out last weekend's bad decisions. It's healing. It's cheap therapy. It's not the same without you, you absolute menace.
+            We're hauling the birthday girl to Kananaskis Nordic Spa to sweat out last weekend's bad decisions. We leave Calgary at 2pm, stay at the spa as long as we like, then eat, drink, and sleep it off. It's healing. It's cheap therapy. It's not the same without you, you absolute menace.
           </p>
           <a href="#rsvp" className="mt-10 inline-block border border-gold px-8 py-4 text-sm uppercase tracking-[0.3em] text-gold transition hover:bg-primary hover:text-primary-foreground">
             RSVP
@@ -64,6 +64,9 @@ function Index() {
             </li>
           ))}
         </ol>
+        <div className="mt-6 border border-border bg-card p-6 text-sm text-muted-foreground">
+          <span className="text-gold">Where we're staying:</span> the accommodation and the dinner spot are still up in the air. RSVP and we'll send you the address, the room split, and the dinner reservation once they're locked.
+        </div>
       </section>
 
       <Rsvp />
