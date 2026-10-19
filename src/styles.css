@@ -196,8 +196,8 @@ p { line-height: 1.7; }
   .gallery-main figcaption > span:last-child { font-size: 42px; }
   .gallery-main .eyebrow { font-size: 11px; }
   .journey-section { padding-block: 88px; }
-  .journey-heading { grid-template-columns: 1fr 1fr; align-items: end; }
-  .journey-heading > p { text-align: right; }
+  .journey-heading { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .journey-heading > p { text-align: left; max-width: 46ch; }
   .route-line { margin-top: 55px; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr); gap: 40px; }
   .route-line h3 { font-size: 36px; }
   .route-line span { font-size: 12px; }
