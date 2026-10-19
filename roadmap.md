@@ -1,7 +1,7 @@
-- [ ] Replace previous RSVP with a published Tally form
-- [ ] Sophisticated spa-inspired design for iPhone 17 Pro / Pro Max and desktop
+- [x] Replace previous RSVP with a published Tally form
+- [x] Sophisticated spa-inspired design for iPhone 17 Pro / Pro Max and desktop
 - [x] Westward drive visual, real map, 1h15 timing
 - [x] Funny degenerate tone, birthday girl Tyra
 - [x] Accommodation taken care of by hosts — page says guests book nothing
 - [ ] Dinner venue + time (waiting on owner)
-- [ ] GitHub Pages static invitation setup
+- [x] GitHub Pages static invitation setup (workflow added; remote deployment not yet run)
