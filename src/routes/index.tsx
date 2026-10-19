@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowDown, ArrowRight, Mountain, MapPin, Car, Waves, Moon, Coffee, Check } from "lucide-react";
+import { ArrowUpRight, ArrowDown, ArrowRight, Mountain, MapPin, Car, Waves, Moon, Coffee, Check, Sunrise } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { invitation } from "@/lib/invitation";
 import hero from "@/assets/hero.jpg";
@@ -26,7 +26,8 @@ const timeline = [
   { time: "By 3:30pm", title: "Robes on", icon: Waves, note: "Arrive at Yora Nordic Spa and slide into the 4pm session. Hot pool, cold plunge, sauna, repeat. Stay as long as you like. (Only 4pm passes are left, so grab yours now — refundable up to 24 hours before.)" },
   { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "We’ll pick the place together and split the cost. Until then: drop your bags, get comfortable." },
   { time: "Later that evening", title: "Dinner & a toast to Tyra", icon: Check, note: "Good food, a short toast, and far too much laughing. Dinner spot still being decided." },
-  { time: "Sunday, November 29", title: "A very slow goodbye", icon: Coffee, note: "Maybe brunch. Maybe a little hike. Maybe neither. Really loose plans — whatever floats. Check out and head home when you’re ready." },
+  { time: "Sunday, November 29", title: "Brunch, or a little hike", icon: Coffee, note: "Really loose plans — maybe brunch, maybe a short hike, maybe neither. Whatever floats." },
+  { time: "Then, whenever", title: "A very slow goodbye", icon: Sunrise, note: "Check out, hugs, and the drive home. No alarm-clock energy — we leave when we leave." },
 ];
 
 function RsvpLink({ className = "", children = "RSVP for the birthday" }: { className?: string; children?: React.ReactNode }) {
