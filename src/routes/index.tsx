@@ -56,7 +56,7 @@ function Index() {
 
       <section id="the-plan" className="intro-section page-width">
         <div><p className="eyebrow text-gold">Less party. More pool.</p><h2>Good company.<br /><em>Questionable decisions.</em></h2></div>
-        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis to sweat out last weekend’s bad decisions. Consider this our attempt at being wellness people.</p><p>Leave Calgary around noon. Soak until we forget what day it is. Then dinner, a cozy overnight, and absolutely no alarm-clock energy. It’s not the same without you, you absolute menace.</p><span className="tiny-signoff">With love, your fellow degenerates</span></div>
+        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis to sweat out a year of bad decisions. Consider this our attempt at being wellness people.</p><p>Leave Calgary around noon. Soak until we forget what day it is. Then dinner, a cozy overnight, and absolutely no alarm-clock energy. It’s not the same without you, you absolute menace.</p><span className="tiny-signoff">With love, your fellow degenerates</span></div>
       </section>
 
       <section className="spa-gallery" aria-label="Winter spa scenes">
