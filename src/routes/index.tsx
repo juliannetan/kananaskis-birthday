@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 const timeline = [
   { time: "Around 2pm", title: "Out we go", icon: Car, note: "Leave Calgary, head west, watch the mountains get big. Can’t make 2pm? No stress — we’ll be at the spa. Come find us." },
   { time: "By 3:30pm", title: "Robes on", icon: Waves, note: "Arrive at Yora Nordic Spa and slide into the 4pm session. Hot pool, cold plunge, sauna, repeat. Stay as long as you like. (Only 4pm passes are left, so grab yours now — refundable up to 24 hours before.)" },
-  { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "The accommodation is split between us and still being picked — we’ll decide together. Drop your bags and get comfortable." },
+  { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "We’ll pick the place together and split the cost. Until then: drop your bags, get comfortable." },
   { time: "Later that evening", title: "Dinner & a toast to Tyra", icon: Check, note: "Good food, a short toast, and far too much laughing. Dinner spot still being decided." },
   { time: "Sunday, November 29", title: "A very slow goodbye", icon: Coffee, note: "Coffee. Pajamas. Check out and head home when you’re ready." },
 ];
