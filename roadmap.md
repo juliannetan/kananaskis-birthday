@@ -23,3 +23,5 @@
 - [x] "Locked in. Loosely." removed from the Tally intro and the plan heading — now "We'll decide that morning" and "Vibe-based."
 - [x] Hero headline is now "Tyra's birthday. Mountain maxxing." (og:title matches); drive section reads "Go west. The view ate." — no slang term or the word "mountain" reused twice
 - [x] Drive heading "The view ate." replaced with "No notes."; pool caption "Hot. Cold. Zero thoughts." replaced with "Pools, but make it fashion."; long footer photo-credit note removed
+- [x] Drive heading cut to just "Go west."; the two pool photos and their captions removed; "No side quests." removed from the hero line
+- [x] Hero headline "Mountain maxxing." sized to fit one row on iPhone 17 Pro / Pro Max
