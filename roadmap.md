@@ -8,3 +8,4 @@
 - [x] Hide the "Edit with Lovable" badge — published site stays view-only for visitors
 - [x] Remove both photos containing a person; replaced with people-free spa scenes
 - [x] Rename the spa to "Yora Nordic Spa Kananaskis" everywhere on the invite (rebrand from Oct 30, 2026)
+- [ ] Fix "sweat out last weekend's bad decisions" — event is over a month away, so the joke is inaccurate
