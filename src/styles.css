@@ -116,18 +116,7 @@ p { line-height: 1.7; }
 .intro-copy { font-size: 16px; color: var(--muted-foreground); max-width: 460px; }
 .intro-copy p + p { margin-top: 18px; }
 .tiny-signoff { font-size: 12px; color: var(--gold); display: block; margin-top: 25px; }
-.spa-gallery { display: grid; grid-template-columns: 1fr; gap: 5px; }
-.spa-gallery figure { position: relative; min-width: 0; overflow: hidden; }
-.spa-gallery img { height: clamp(380px, 62svh, 520px); width: 100%; object-fit: cover; }
-.gallery-main img { object-position: 45% center; }
-.gallery-side img { object-position: 52% center; }
-.spa-gallery figure::after { content: ""; position: absolute; inset: 0; background: var(--photo-veil); }
-.spa-gallery figcaption { position: absolute; bottom: 24px; left: 20px; right: 15px; z-index: 1; font-size: 13px; line-height: 1.5; }
-.gallery-main figcaption span { display: block; }
-.gallery-main .eyebrow { font-size: 10px; margin-bottom: 8px; }
-.gallery-main figcaption > span:last-child { font-family: var(--font-display); font-size: 26px; line-height: 1.1; }
 .journey-section { background: var(--alpine); color: var(--alpine-foreground); padding-block: 64px; }
-.journey-section h2 em { color: var(--alpine-muted); }
 .journey-heading { display: grid; gap: 22px; }
 .journey-heading > p { color: var(--alpine-muted); font-size: 15px; }
 .route-line { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr) minmax(0, 1fr); gap: 10px; margin-top: 42px; align-items: end; }
@@ -189,12 +178,6 @@ p { line-height: 1.7; }
   .occasion-inner { gap: 20px; padding-block: 25px; }
   .occasion-location { width: auto; margin-left: auto; }
   .intro-section { grid-template-columns: 1.15fr 1fr; gap: 70px; padding-block: 100px; }
-  .spa-gallery { grid-template-columns: 1.55fr 1fr; gap: 10px; }
-  .spa-gallery img { height: 620px; }
-  .gallery-main img { object-position: center 40%; }
-  .spa-gallery figcaption { bottom: 42px; left: 48px; }
-  .gallery-main figcaption > span:last-child { font-size: 42px; }
-  .gallery-main .eyebrow { font-size: 11px; }
   .journey-section { padding-block: 88px; }
   .journey-heading { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .journey-heading > p { text-align: left; max-width: 46ch; }
