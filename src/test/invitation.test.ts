@@ -14,8 +14,9 @@ describe('Birthday invitation requirements', () => {
     expect(minutesAtSpa).toBeGreaterThanOrEqual(75);
     expect(minutesAtSpa).toBeLessThanOrEqual(105);
   });
-  it('has accommodation handled by the hosts', () => {
-    expect(invitation.accommodationHandled).toBe(true);
+  it('splits the accommodation and picks it together', () => {
+    expect(invitation.accommodationSplit).toBe(true);
+    expect(invitation.accommodationDecided).toBe(false);
   });
   it('tells guests to book the $173 spa pass themselves', () => {
     expect(invitation.spaPassCad).toBe(173);
