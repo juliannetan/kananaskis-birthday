@@ -1,16 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
-import { findRsvp, saveRsvp } from "@/lib/rsvp.functions";
+import { ArrowUpRight, ArrowDown, ArrowLeft, Mountain, MapPin, Car, Waves, Moon, Coffee, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { invitation } from "@/lib/invitation";
 import hero from "@/assets/hero.jpg";
+import mountain from "@/assets/nordic-mountain.jpg.asset.json";
+import winter from "@/assets/nordic-winter.jpg.asset.json";
+import night from "@/assets/nordic-night.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tyra Turns Another Year — Spa Day in Kananaskis · Nov 28" },
-      { name: "description", content: "Tyra's birthday, Nov 28: around noon out of Calgary, spa all day, then dinner and a sleepover. RSVP inside." },
-      { property: "og:title", content: "Tyra's Birthday Spa Day · Nov 28" },
-      { property: "og:description", content: "Calgary → Kananaskis Nordic Spa, Nov 28. Depart around noon, arrive ~1:15. Stay all day, then dinner and the accommodation." },
+      { title: "Tyra’s Birthday · November 28 — Fun Is the Way" },
+      { name: "description", content: "A birthday escape to Kananaskis Nordic Spa. November 28, 2026: Calgary around noon, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
+      { property: "og:title", content: "Tyra’s Birthday — A Little Older. A Lot More Relaxed." },
+      { property: "og:description", content: "November 28 · Calgary to Kananaskis Nordic Spa · A chill birthday overnight with our favourite degenerates. Accommodation handled. RSVP with Tally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -19,222 +22,64 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "12:00pm", title: "Depart Calgary", note: "Rolling out around noon — no alarm-clock energy required. Grab a coffee, claim shotgun, argue about the aux, and drift west on Hwy 1. Can't make noon? No worries — we'll be waiting for you at the spa." },
-  { time: "12:40pm", title: "Turn south onto Hwy 40", note: "Someone asks 'are we there yet.' Mountains appear and everyone suddenly goes quiet and spiritual." },
-  { time: "1:15pm", title: "Arrive at the spa", note: "Robes on. Phones away (after one group pic for the ’gram)." },
-  { time: "1:30pm", title: "Hot · Cold · Repeat", note: "Boil in the hot pool, exhale loudly in the cold plunge, doze in the sauna. Repeat until your inbox feels like it belongs to a stranger." },
-  { time: "All day", title: "No rush, no curfew", note: "Stay as long as you like. Nap, sweat, lose track of time in the steam, and plot the next group trip like the degenerates you are." },
-  { time: "7:30pm", title: "Check in to the accommodation", note: "Drop the bags, get dry, and settle into full cozy mode." },
-  { time: "8:30pm", title: "Dinner", note: "A big table, far too much food, and a toast to Tyra — kept warm and low-key, no speeches with a runtime." },
-  { time: "Next day", title: "Slow morning, then check out", note: "Coffee, pajamas until legally required to leave, and an easy drive home." },
+  { time: "Around noon", title: "The great escape", icon: Car, note: "Coffee acquired. Aux privileges disputed. Leave Calgary and head west. Can’t make noon? We’ll be waiting for you at the spa." },
+  { time: "~1:15 pm", title: "Enter robe mode", icon: Waves, note: "Arrive at Kananaskis Nordic Spa. Hot pool, cold plunge, sauna, repeat. Stay as long as you like — no rushing the relaxation." },
+  { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "Accommodation is taken care of. Don’t book a thing. Drop your bags and settle into aggressively cozy mode." },
+  { time: "Later that evening", title: "Dinner & birthday slander", icon: Check, note: "Good food, a low-key toast to Tyra, and a suspicious amount of laughing. Dinner spot still being decided." },
+  { time: "Sunday, November 29", title: "A very slow goodbye", icon: Coffee, note: "Coffee. Pajamas. A gentle return to society. Check out and head home when it’s time." },
 ];
+
+function RsvpLink({ className = "", children = "RSVP for the birthday" }: { className?: string; children?: React.ReactNode }) {
+  return <Button asChild className={`invitation-button ${className}`}><a href={invitation.tallyUrl} target="_blank" rel="noreferrer">{children}<ArrowUpRight aria-hidden="true" /></a></Button>;
+}
 
 function Index() {
   return (
-    <main className="overflow-x-hidden">
-      <section className="relative flex min-h-screen items-end">
-        <img src={hero} alt="Steaming outdoor pools among snowy pines in Kananaskis" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="veil absolute inset-0" />
-        <div className="relative mx-auto w-full max-w-5xl px-6 pb-24 animate-rise">
-          <p className="mb-6 text-xs uppercase tracking-[0.4em] text-gold">November 28 · Mandatory fun · Tyra's birthday</p>
-          <h1 className="text-6xl leading-[0.95] md:text-8xl">
-            Tyra's getting older.<br /><em className="text-gold">We're getting steamed.</em>
-          </h1>
-          <p className="mt-8 max-w-lg text-lg text-muted-foreground">
-            We're hauling the birthday girl to Kananaskis Nordic Spa to sweat out last weekend's bad decisions. We leave Calgary around noon on November 28 — and if that doesn't work for you, no worries, we'll be waiting at the spa. Stay as long as we like, then eat, drink, and sleep it off. It's healing. It's cheap therapy. It's not the same without you, you absolute menace.
-          </p>
-          <a href="#rsvp" className="mt-10 inline-block border border-gold px-8 py-4 text-sm uppercase tracking-[0.3em] text-gold transition hover:bg-primary hover:text-primary-foreground">
-            RSVP
-          </a>
+    <main>
+      <section className="birthday-hero">
+        <img src={hero} alt="Steaming outdoor spa pools surrounded by snowy Kananaskis pines" width={1920} height={1088} fetchPriority="high" className="hero-photo" />
+        <div className="hero-veil" />
+        <header className="hero-header page-width">
+          <a className="wordmark" href="#" aria-label="Fun Is the Way, back to top">fun is<br /><span>the way.</span></a>
+          <div className="header-right"><span className="header-date">NOVEMBER 28, 2026</span><Button asChild variant="ghost" className="header-rsvp"><a href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight /></a></Button></div>
+        </header>
+        <div className="hero-content page-width animate-rise">
+          <p className="eyebrow text-gold">A birthday escape to Kananaskis</p>
+          <h1>Tyra’s birthday.<br /><em>A little older.<br className="mobile-break" /> A lot more relaxed.</em></h1>
+          <p className="hero-description">One day in the mountains. One cozy overnight.<br />All our favourite degenerates.</p>
+          <RsvpLink />
+          <a href="#the-plan" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> A little look at the plan</a>
         </div>
+      </section>
+
+      <div className="occasion-strip"><div className="page-width occasion-inner"><span>Saturday, November 28</span><span className="occasion-dot">·</span><span>Spa + sleepover</span><span className="occasion-location"><MapPin size={14} /> Kananaskis, Alberta</span></div></div>
+
+      <section id="the-plan" className="intro-section page-width">
+        <div><p className="eyebrow text-gold">Less party. More pool.</p><h2>Good company.<br /><em>Questionable decisions.</em></h2></div>
+        <div className="intro-copy"><p>We’re taking Tyra to Kananaskis Nordic Spa to sweat out last weekend’s bad decisions. Consider this our attempt at being wellness people.</p><p>Leave Calgary around noon. Soak until we forget what day it is. Then dinner, a cozy overnight, and absolutely no alarm-clock energy. It’s not the same without you, you absolute menace.</p><span className="tiny-signoff">With love, your fellow degenerates</span></div>
+      </section>
+
+      <section className="spa-gallery" aria-label="Kananaskis Nordic Spa photographs">
+        <figure className="gallery-main"><img src={mountain.url} alt="Steam rising from Kananaskis Nordic Spa pools beneath snowy Rocky Mountains" width={683} height={1024} loading="lazy" /><figcaption><span className="eyebrow">Our kind of happy place</span><span>Hot. Cold. Completely unbothered.</span></figcaption></figure>
+        <figure className="gallery-side"><img src={winter.url} alt="Snow-covered trees beside the Nordic Spa cold plunge" width={683} height={1024} loading="lazy" /><figcaption>A little cold plunge builds character.<br />Apparently.</figcaption></figure>
       </section>
 
       <Journey />
 
-      <section className="mx-auto max-w-3xl px-6 py-28">
-        <p className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">The day</p>
-        <h2 className="mb-16 text-5xl">How it unfolds</h2>
-        <ol className="relative border-l border-border">
-          {timeline.map((t, i) => (
-            <li key={t.title} className="relative mb-14 pl-10 animate-rise" style={{ animationDelay: `${i * 0.08}s` }}>
-              <span className="absolute -left-[7px] top-3 h-3 w-3 rounded-full bg-gold" />
-              <div className="font-display text-3xl text-gold">{t.time}</div>
-              <h3 className="mt-1 text-2xl">{t.title}</h3>
-              <p className="mt-2 text-muted-foreground">{t.note}</p>
-            </li>
-          ))}
-        </ol>
-        <div className="mt-6 border border-border bg-card p-6 text-sm text-muted-foreground">
-          <span className="text-gold">Where we're staying:</span> the accommodation is taken care of — we've got it, so don't book a thing and don't bring a pillow. Show up with a swimsuit and your worst decisions. The dinner spot is still being argued over; RSVP and we'll send you the address and the reservation time once it's locked.
-        </div>
+      <section className="day-section page-width" id="the-day">
+        <div className="day-heading"><p className="eyebrow text-gold">November 28 → 29</p><h2>The plan.<br /><em>Loose, obviously.</em></h2><p>There’s a direction.<br />There is not a military schedule.</p></div>
+        <ol className="timeline">{timeline.map(({ time, title, note, icon: Icon }, index) => <li key={title}><div className="timeline-mark"><Icon size={18} strokeWidth={1.3} aria-hidden="true" /></div><div className="timeline-content"><span className="timeline-time">{time}</span><h3>{title}</h3><p>{note}</p></div><span className="timeline-number">0{index + 1}</span></li>)}</ol>
       </section>
 
-      <Rsvp />
+      <section className="overnight-section"><img src={night.url} alt="Warmly lit sauna buildings and outdoor pools at Kananaskis Nordic Spa in the evening" width={1024} height={683} loading="lazy" /><div className="overnight-veil" /><div className="page-width overnight-content"><p className="eyebrow text-gold">Stay a little longer</p><h2>No rush.<br /><em>No drive home tonight.</em></h2><p>The accommodation is on us to sort out.<br />You just bring a swimsuit and your worst decisions.</p><div className="overnight-note"><Check size={16} /> Accommodation handled. Guests book nothing.</div></div></section>
 
-      <footer className="border-t border-border py-10 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
-        Calgary → Kananaskis · 1 hr 15 min · Happy birthday, Tyra
-      </footer>
+      <section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><p className="eyebrow text-gold">Save your spot in the chaos</p><h2>You coming<br /><em>or what?</em></h2><p>Tyra deserves this. Frankly, so do you.</p><RsvpLink>Count me in (or out)</RsvpLink><span className="rsvp-date">NOVEMBER 28 · AROUND NOON · ONE COZY OVERNIGHT</span></section>
+
+      <footer className="site-footer page-width"><div className="footer-main"><a href="#" className="wordmark">fun is<br /><span>the way.</span></a><p>Made for Tyra.<br />And the people who make life fun.</p><a href="https://knordicspa.com/" target="_blank" rel="noreferrer" className="footer-spa">Kananaskis Nordic Spa <ArrowUpRight size={14} /></a></div><div className="photo-credits">Spa photos: Kiki Davies / Pursuing Pretty & Rebecca Hardcastle · Explore Kananaskis<br />A private birthday invitation. Not affiliated with Kananaskis Nordic Spa.</div></footer>
     </main>
   );
 }
 
 function Journey() {
-  const route = "M 920 200 C 760 200, 640 190, 520 170 C 420 150, 380 120, 300 110 C 230 100, 160 120, 90 95";
-  return (
-    <section className="border-y border-border bg-card py-24">
-      <div className="mx-auto max-w-5xl px-6">
-        <p className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">The drive</p>
-        <h2 className="mb-12 text-5xl">West into the Rockies</h2>
-        <svg viewBox="0 0 1000 280" className="w-full">
-          <path d="M 0 280 L 0 120 L 70 60 L 140 130 L 220 40 L 300 120 L 380 70 L 470 170 L 560 220 L 1000 230 L 1000 280 Z" fill="var(--mist)" />
-          <path d="M 0 280 L 0 170 L 110 90 L 190 170 L 260 100 L 360 200 L 1000 250 L 1000 280 Z" fill="var(--mist)" />
-          <path d={route} fill="none" stroke="var(--gold)" strokeWidth="2" strokeDasharray="6 8" />
-          <circle cx="920" cy="200" r="7" fill="var(--gold)" />
-          <circle cx="90" cy="95" r="7" fill="var(--gold)" />
-          <text x="920" y="240" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Calgary · 12:00pm</text>
-          <text x="520" y="205" fill="var(--muted-foreground)" fontSize="14" textAnchor="middle">Hwy 1 → Hwy 40</text>
-          <text x="110" y="60" fill="var(--foreground)" fontSize="18" textAnchor="middle" fontFamily="var(--font-display)">Nordic Spa · 1:15pm</text>
-          <text x="960" y="30" fill="var(--muted-foreground)" fontSize="12" textAnchor="end" letterSpacing="3">W ← → E</text>
-          {[0, 1, 2].map((i) => (
-            <circle key={i} cx={80 + i * 10} cy="85" r="4" fill="var(--foreground)" className="animate-steam" style={{ animationDelay: `${i * 1.2}s` }} />
-          ))}
-          <g style={{ offsetPath: `path("${route}")`, offsetRotate: "0deg", animation: "drive 7s ease-in-out infinite alternate" }}>
-            <rect x="-14" y="-8" width="28" height="14" rx="4" fill="var(--gold)" />
-          </g>
-        </svg>
-        <div className="mt-12 grid gap-8 text-sm md:grid-cols-3">
-          <div><div className="font-display text-3xl text-gold">~100 km</div><p className="text-muted-foreground">Hwy 1 west, then Hwy 40 south</p></div>
-          <div><div className="font-display text-3xl text-gold">1 hr 15 min</div><p className="text-muted-foreground">In clear conditions, from central Calgary</p></div>
-          <div><div className="font-display text-3xl text-gold">Carpool</div><p className="text-muted-foreground">Rides get sorted together. Miss the noon send-off and we'll save you a robe at the spa.</p></div>
-        </div>
-        <div className="mt-12 overflow-hidden border border-border">
-          <iframe
-            title="Driving route from Calgary to Kananaskis Nordic Spa"
-            src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Kananaskis+Nordic+Spa,+Kananaskis+Village,+AB&output=embed"
-            className="h-[420px] w-full"
-            loading="lazy"
-          />
-        </div>
-        <a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Kananaskis+Nordic+Spa" target="_blank" rel="noreferrer" className="mt-4 inline-block text-xs uppercase tracking-[0.3em] text-gold">
-          Open directions in Google Maps →
-        </a>
-      </div>
-    </section>
-  );
-}
-
-type Form = { email: string; first_name: string; last_name: string; attending: boolean; departure_works: boolean; preferred_time: string };
-const empty: Form = { email: "", first_name: "", last_name: "", attending: true, departure_works: true, preferred_time: "" };
-
-function Rsvp() {
-  const find = useServerFn(findRsvp);
-  const save = useServerFn(saveRsvp);
-  const [f, setF] = useState<Form>(empty);
-  const [step, setStep] = useState<"form" | "lookup" | "sent">("form");
-  const [editing, setEditing] = useState(false);
-  const [busy, setBusy] = useState(false);
-  const [msg, setMsg] = useState("");
-  const set = <K extends keyof Form>(k: K, v: Form[K]) => setF((p) => ({ ...p, [k]: v }));
-
-  async function lookup(e: React.FormEvent) {
-    e.preventDefault(); setBusy(true); setMsg("");
-    try {
-      const r = await find({ data: { email: f.email } });
-      if (!r) { setMsg("We couldn't find an RSVP for that email. You can send a new one below."); setStep("form"); }
-      else {
-        setF({ email: r.email, first_name: r.first_name, last_name: r.last_name, attending: r.attending, departure_works: r.departure_works ?? true, preferred_time: r.preferred_time ?? "" });
-        setEditing(true); setStep("form");
-      }
-    } catch { setMsg("Please enter a valid email."); } finally { setBusy(false); }
-  }
-
-  async function submit(e: React.FormEvent) {
-    e.preventDefault(); setBusy(true); setMsg("");
-    try {
-      await save({ data: {
-        email: f.email, first_name: f.first_name, last_name: f.last_name, attending: f.attending,
-        departure_works: f.attending ? f.departure_works : null,
-        preferred_time: f.attending && !f.departure_works ? f.preferred_time || null : null,
-      } });
-      setStep("sent");
-    } catch { setMsg("Something didn't go through. Please check your details and try again."); } finally { setBusy(false); }
-  }
-
-  const input = "mt-2 w-full border-b border-input bg-transparent py-3 text-xl outline-none focus:border-gold";
-  const label = "text-xs uppercase tracking-[0.3em] text-muted-foreground";
-
-  return (
-    <section id="rsvp" className="mx-auto max-w-2xl px-6 py-28">
-      <p className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">RSVP</p>
-      <h2 className="mb-4 text-5xl">{editing ? "Update your RSVP" : "You coming or what?"}</h2>
-      <p className="mb-12 text-muted-foreground">Tyra deserves this. Frankly, so do you.</p>
-
-      {step === "sent" ? (
-        <div className="border border-gold p-10 text-center">
-          <h3 className="text-3xl text-gold">{f.attending ? "Pack your swimsuit, degenerate." : "Fine. We'll talk about you in the hot tub."}</h3>
-          <p className="mt-3 text-muted-foreground">Thank you, {f.first_name}. Need to change something? Come back and use your email.</p>
-          <button onClick={() => { setStep("form"); setEditing(true); }} className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">Edit my RSVP</button>
-        </div>
-      ) : step === "lookup" ? (
-        <form onSubmit={lookup} className="space-y-8">
-          <label className="block"><span className={label}>Email you RSVP'd with</span>
-            <input type="email" required value={f.email} onChange={(e) => set("email", e.target.value)} className={input} />
-          </label>
-          {msg && <p className="text-sm text-muted-foreground">{msg}</p>}
-          <button disabled={busy} className="w-full bg-primary py-4 text-sm uppercase tracking-[0.3em] text-primary-foreground transition hover:opacity-90 disabled:opacity-50">
-            {busy ? "Finding…" : "Find my RSVP"}
-          </button>
-          <button type="button" onClick={() => setStep("form")} className="w-full text-xs uppercase tracking-[0.3em] text-muted-foreground">Back</button>
-        </form>
-      ) : (
-        <form onSubmit={submit} className="space-y-8">
-          {!editing && (
-            <button type="button" onClick={() => { setStep("lookup"); setMsg(""); }} className="text-xs uppercase tracking-[0.3em] text-gold">
-              Already RSVP'd? Edit it with your email →
-            </button>
-          )}
-          <div className="grid gap-8 md:grid-cols-2">
-            <label className="block"><span className={label}>First name</span>
-              <input required maxLength={100} value={f.first_name} onChange={(e) => set("first_name", e.target.value)} className={input} />
-            </label>
-            <label className="block"><span className={label}>Last name</span>
-              <input required maxLength={100} value={f.last_name} onChange={(e) => set("last_name", e.target.value)} className={input} />
-            </label>
-          </div>
-          <label className="block"><span className={label}>Email</span>
-            <input type="email" required maxLength={255} readOnly={editing} value={f.email} onChange={(e) => set("email", e.target.value)} className={input} />
-          </label>
-          <Choice label="Can you come?" value={f.attending ? "yes" : "no"} onChange={(v) => set("attending", v === "yes")} options={[["yes", "Obviously I'm in"], ["no", "I'm a coward (no)"]]} />
-          {f.attending && (
-            <>
-              <Choice label="How are you getting there?" value={f.departure_works ? "car" : "spa"} onChange={(v) => set("departure_works", v === "car")} options={[["car", "In the car at noon, obviously"], ["spa", "Can't make noon — save me a robe"]]} />
-              {!f.departure_works && (
-                <input placeholder="What time will you get to the spa? We'll be waiting." maxLength={200} value={f.preferred_time} onChange={(e) => set("preferred_time", e.target.value)} className={input} />
-              )}
-            </>
-          )}
-          {msg && <p className="text-sm text-muted-foreground">{msg}</p>}
-          <button disabled={busy} className="w-full bg-primary py-4 text-sm uppercase tracking-[0.3em] text-primary-foreground transition hover:opacity-90 disabled:opacity-50">
-            {busy ? "Sending…" : editing ? "Update RSVP" : "Send RSVP"}
-          </button>
-        </form>
-      )}
-    </section>
-  );
-}
-
-function Choice({ label, value, onChange, options }: { label: string; value: string; onChange: (v: string) => void; options: [string, string][] }) {
-  return (
-    <div>
-      <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">{label}</span>
-      <div className="mt-3 grid grid-cols-2 gap-3">
-        {options.map(([k, l]) => (
-          <button type="button" key={k} onClick={() => onChange(k)}
-            className={`border py-4 transition ${value === k ? "border-gold bg-mist text-gold" : "border-border text-muted-foreground"}`}>
-            {l}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
+  return <section className="journey-section" id="the-drive"><div className="page-width"><div className="journey-heading"><div><p className="eyebrow">The drive</p><h2>Go west.<br /><em>Exhale a little.</em></h2></div><p>Calgary to Kananaskis Nordic Spa.<br />Less city. More mountains.</p></div><div className="route-line"><div className="route-destination"><Mountain size={24} strokeWidth={1.2} /><h3>Kananaskis</h3><span>Arrive ~1:15 pm</span></div><div className="route-middle"><span>HWY 1 WEST → HWY 40 SOUTH</span><div className="route-track"><ArrowLeft size={22} /><Car size={22} /></div><span>~100 KM · ~1 HR 15 MIN</span></div><div className="route-origin"><MapPin size={24} strokeWidth={1.2} /><h3>Calgary</h3><span>Leave around noon</span></div></div><div className="drive-note"><p>Can’t make the noon send-off? No worries.<br /><strong>We’ll be waiting for you at the spa.</strong></p><span>Approximate drive from central Calgary.<br />November roads may add a little time.</span></div><div className="map-frame"><iframe title="Map from Calgary west to Kananaskis Nordic Spa" src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Kananaskis+Nordic+Spa,+Kananaskis+Village,+AB&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><Button asChild variant="link" className="directions-link"><a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Kananaskis+Nordic+Spa" target="_blank" rel="noreferrer">Open directions <ArrowUpRight /></a></Button></div></section>;
 }

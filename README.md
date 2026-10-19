@@ -1,6 +1,6 @@
 # Kananaskis Birthday
 
-build a very sophisticated birthday page. it's to ask if friends can come to our friend's birthday spa 1hr away at kananaskis nordic spa. we are in calgary. do a visual of the day of the event from departing driving from calgary to the spa, timeline, and spa time until as long as they'd like. would love for them to come. all i need from them is an rsvp, and if time works for them 10am departure in calgary.
+A private birthday invitation for Tyra: November 28, 2026, leaving Calgary around noon for Kananaskis Nordic Spa, dinner and a cozy overnight. RSVP is handled by a published Tally form, so guests do not need an account and static hosting does not require RSVP server endpoints.
 
 This project was built with [Lovable](https://lovable.dev).
 
@@ -24,3 +24,11 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## GitHub Pages
+
+In the repository, choose **Settings → Pages → Source → GitHub Actions**. The included workflow builds the invitation, verifies `dist/client/index.html`, copies spa photographs into the static output and deploys it when `main` changes. You can also start the workflow from **Actions → Deploy invitation to GitHub Pages → Run workflow**.
+
+The current custom domain remains connected to Lovable; this workflow does not move it. To host that domain on GitHub instead, configure the domain and DNS in GitHub Pages separately. The GitHub deployment has not been run or verified from this editor.
+
+Spa photographs are credited to Kiki Davies / Pursuing Pretty and Rebecca Hardcastle via Explore Kananaskis. This private invitation is not affiliated with the spa.

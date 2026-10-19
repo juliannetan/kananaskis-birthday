@@ -1,0 +1,51 @@
+name: Deploy invitation to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun run build
+      - name: Verify static invitation and copy spa photos
+        run: |
+          test -s dist/client/index.html
+          touch dist/client/.nojekyll
+          node --input-type=module <<'JS'
+          import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises';
+          import path from 'node:path';
+          for (const file of await readdir('src/assets')) {
+            if (!file.endsWith('.asset.json')) continue;
+            const asset = JSON.parse(await readFile(path.join('src/assets', file), 'utf8'));
+            const response = await fetch(new URL(asset.url, 'https://kananaskis-birthday.lovable.app'));
+            if (!response.ok) throw new Error(`Photo download failed: ${file} (${response.status})`);
+            const destination = path.join('dist/client', asset.url);
+            await mkdir(path.dirname(destination), { recursive: true });
+            await writeFile(destination, Buffer.from(await response.arrayBuffer()));
+          }
+          JS
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/client
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
