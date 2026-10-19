@@ -4,5 +4,7 @@ export const invitation = {
   arrivalHour: 15,
   arrivalMinute: 30,
   accommodationHandled: true,
+  spaPassCad: 173,
+  spaBookingUrl: 'https://knordicspa.com/access/',
   tallyUrl: 'https://tally.so/r/RWKekP',
 } as const;
