@@ -17,3 +17,4 @@
 - [x] Accommodation copy: split between the group, not decided yet, picked collectively — guests book their own spa pass, never say "handled" or "don't book a thing"
 - [x] Rewrite invite + Tally wording: clear, simple, light humor
 - [x] Sunday Nov 29: maybe brunch or a hike, really loose — "whatever floats"
+- [x] Copy pass: drive heading "Exhale a little" and hero "A little older. A lot more relaxed" both replaced with lighter wording
