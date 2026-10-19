@@ -18,3 +18,5 @@
 - [x] Rewrite invite + Tally wording: clear, simple, light humor
 - [x] Sunday Nov 29: maybe brunch or a hike, really loose — "whatever floats"
 - [x] Copy pass: drive heading "Exhale a little" and hero "A little older. A lot more relaxed" both replaced with lighter wording
+- [x] Drive heading reworded in Gen Z / alpha style: "Go west. Mountain maxxing."
+- [x] Whole page reworded in Gen Z / alpha slang (facts, times, prices untouched)
