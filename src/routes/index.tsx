@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "2:00pm", title: "Depart Calgary", note: "Be on time. Yes, you. Grab an iced coffee, claim shotgun, argue about the aux, and head west on Hwy 1." },
+  { time: "2:00pm", title: "Depart Calgary", note: "Be on time. Yes, you. Grab an iced coffee, claim shotgun, argue about the aux, and head west on Hwy 1. Can't make 2pm? No worries — we'll be waiting for you at the spa." },
   { time: "2:40pm", title: "Turn south onto Hwy 40", note: "Someone asks 'are we there yet.' Someone needs to pee. Mountains appear and everyone suddenly goes quiet and spiritual." },
   { time: "3:15pm", title: "Arrive at the spa", note: "Robes on. Phones away (after one group pic for the ’gram)." },
   { time: "3:30pm", title: "Hot · Cold · Scream", note: "Boil in the hot pool, shriek in the cold plunge, pretend to meditate in the sauna. Repeat until you've forgotten your emails." },
@@ -41,7 +41,7 @@ function Index() {
             Tyra's getting older.<br /><em className="text-gold">We're getting steamed.</em>
           </h1>
           <p className="mt-8 max-w-lg text-lg text-muted-foreground">
-            We're hauling the birthday girl to Kananaskis Nordic Spa to sweat out last weekend's bad decisions. We leave Calgary at 2pm, stay at the spa as long as we like, then eat, drink, and sleep it off. It's healing. It's cheap therapy. It's not the same without you, you absolute menace.
+            We're hauling the birthday girl to Kananaskis Nordic Spa to sweat out last weekend's bad decisions. We leave Calgary at 2pm — and if that doesn't work for you, no worries, we'll be waiting at the spa. Stay as long as we like, then eat, drink, and sleep it off. It's healing. It's cheap therapy. It's not the same without you, you absolute menace.
           </p>
           <a href="#rsvp" className="mt-10 inline-block border border-gold px-8 py-4 text-sm uppercase tracking-[0.3em] text-gold transition hover:bg-primary hover:text-primary-foreground">
             RSVP
@@ -105,7 +105,7 @@ function Journey() {
         <div className="mt-12 grid gap-8 text-sm md:grid-cols-3">
           <div><div className="font-display text-3xl text-gold">~100 km</div><p className="text-muted-foreground">Hwy 1 west, then Hwy 40 south</p></div>
           <div><div className="font-display text-3xl text-gold">1 hr 15 min</div><p className="text-muted-foreground">In clear conditions, from central Calgary</p></div>
-          <div><div className="font-display text-3xl text-gold">Carpool</div><p className="text-muted-foreground">We'll sort rides together</p></div>
+          <div><div className="font-display text-3xl text-gold">Carpool</div><p className="text-muted-foreground">Rides get sorted together. Miss the 2pm send-off and we'll save you a robe at the spa.</p></div>
         </div>
         <div className="mt-12 overflow-hidden border border-border">
           <iframe
@@ -207,9 +207,9 @@ function Rsvp() {
           <Choice label="Can you come?" value={f.attending ? "yes" : "no"} onChange={(v) => set("attending", v === "yes")} options={[["yes", "Obviously I'm in"], ["no", "I'm a coward (no)"]]} />
           {f.attending && (
             <>
-              <Choice label="Does a 2pm departure from Calgary work?" value={f.departure_works ? "works" : "other"} onChange={(v) => set("departure_works", v === "works")} options={[["works", "2pm, I'll be there"], ["other", "2pm?? Be serious"]]} />
+              <Choice label="How are you getting there?" value={f.departure_works ? "car" : "spa"} onChange={(v) => set("departure_works", v === "car")} options={[["car", "In the car at 2pm, obviously"], ["spa", "Can't make 2pm — save me a robe"]]} />
               {!f.departure_works && (
-                <input placeholder="What time works for you?" maxLength={200} value={f.preferred_time} onChange={(e) => set("preferred_time", e.target.value)} className={input} />
+                <input placeholder="What time will you get to the spa? We'll be waiting." maxLength={200} value={f.preferred_time} onChange={(e) => set("preferred_time", e.target.value)} className={input} />
               )}
             </>
           )}
