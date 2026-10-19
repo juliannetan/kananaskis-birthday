@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Tyra’s Birthday · November 28 — Fun Is the Way" },
       { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around 2pm, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
-      { property: "og:title", content: "Tyra’s Birthday — Hot Water. No Alarms." },
+      { property: "og:title", content: "Tyra’s Birthday — Mountain Maxxing." },
       { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with the group chat. Accommodation split between the crew. RSVP with Tally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -46,7 +46,7 @@ function Index() {
         </header>
         <div className="hero-content page-width animate-rise">
           <p className="eyebrow text-gold">Tyra’s birthday era, unlocked</p>
-          <h1>Tyra’s birthday.<br /><em>Hot water.<br className="mobile-break" /> No alarms.</em></h1>
+          <h1>Tyra’s birthday.<br /><em>Mountain<br className="mobile-break" /> maxxing.</em></h1>
           <p className="hero-description">One day in the mountains. One cozy overnight.<br />No side quests.</p>
           <RsvpLink />
           <a href="#the-plan" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
