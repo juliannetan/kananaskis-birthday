@@ -104,7 +104,7 @@ p { line-height: 1.7; }
 .header-date { display: none; font-size: 11px; }
 .header-rsvp { color: var(--foreground); min-height: 44px; font-size: 12px; padding-inline: 10px; }
 .hero-content { position: relative; margin-top: auto; padding-top: 90px; padding-bottom: max(35px, calc(env(safe-area-inset-bottom) + 18px)); }
-.hero-content h1 { font-size: 54px; line-height: 1; max-width: 830px; }
+.hero-content h1 { font-size: min(48px, 11.9vw); line-height: 1.04; max-width: 830px; }
 .hero-content h1 em { color: var(--gold); }
 .hero-description { font-size: 16px; color: var(--foreground); margin-top: 24px; margin-bottom: 28px; }
 .invitation-button { min-height: 54px; border-radius: 2px; padding: 16px 24px; font-size: 13px; font-weight: 500; gap: 28px; box-shadow: none; }
@@ -171,7 +171,6 @@ p { line-height: 1.7; }
   h2 { font-size: 60px; }
   .hero-content { padding-bottom: 46px; }
   .hero-content h1 { font-size: 86px; }
-  .mobile-break { display: none; }
   .header-date { display: inline; }
   .hero-description { font-size: 18px; }
   .hero-scroll { margin-top: 40px; }
