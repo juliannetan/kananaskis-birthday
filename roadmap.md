@@ -20,3 +20,4 @@
 - [x] Copy pass: drive heading "Exhale a little" and hero "A little older. A lot more relaxed" both replaced with lighter wording
 - [x] Drive heading reworded in Gen Z / alpha style: "Go west. Mountain maxxing."
 - [x] Whole page reworded in Gen Z / alpha slang (facts, times, prices untouched)
+- [x] "Locked in. Loosely." removed from the Tally intro and the plan heading — now "We'll decide that morning" and "Vibe-based."
