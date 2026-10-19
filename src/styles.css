@@ -179,8 +179,8 @@ p { line-height: 1.7; }
   .occasion-location { width: auto; margin-left: auto; }
   .intro-section { grid-template-columns: 1.15fr 1fr; gap: 70px; padding-block: 100px; }
   .journey-section { padding-block: 88px; }
-  .journey-heading { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-  .journey-heading > p { text-align: left; max-width: 46ch; }
+  .journey-heading { grid-template-columns: 1fr 1fr; align-items: end; }
+  .journey-heading > p { text-align: right; }
   .route-line { margin-top: 55px; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr); gap: 40px; }
   .route-line h3 { font-size: 36px; }
   .route-line span { font-size: 12px; }
