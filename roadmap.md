@@ -1,0 +1,4 @@
+- [x] RSVP saving + edit by email
+- [x] Westward drive visual, real map, 1h15 timing
+- [x] Funny degenerate tone, birthday girl Tyra
+- [ ] Owner email notifications to juliannemtan@gmail.com (blocked: needs a verified email domain)
