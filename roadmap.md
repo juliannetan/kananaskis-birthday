@@ -10,3 +10,4 @@
 - [x] Rename the spa to "Yora Nordic Spa Kananaskis" everywhere on the invite (rebrand from Oct 30, 2026)
 - [x] Fix "sweat out last weekend's bad decisions" — now reads "a year of bad decisions"
 - [ ] Mobile-first polish: stack the two spa photos full-width on phones, raise contrast/size of the small grey notes, protect the hero's bottom edge from the iPhone home bar
+- [ ] Re-time the day: arrive at the spa by 3:30pm (no rush), then accommodation check-in, then birthday dinner; accommodation taken care of; RSVP is the only ask; add "let's make this weekend memorable"
