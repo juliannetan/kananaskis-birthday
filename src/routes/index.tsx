@@ -3,8 +3,8 @@ import { ArrowUpRight, ArrowDown, ArrowLeft, Mountain, MapPin, Car, Waves, Moon,
 import { Button } from "@/components/ui/button";
 import { invitation } from "@/lib/invitation";
 import hero from "@/assets/hero.jpg";
-import mountain from "@/assets/nordic-mountain.jpg.asset.json";
-import winter from "@/assets/nordic-winter.jpg.asset.json";
+import spaPools from "@/assets/spa-pools.jpg";
+import spaChute from "@/assets/spa-chute.jpg";
 import night from "@/assets/nordic-night.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
