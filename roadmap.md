@@ -5,3 +5,6 @@
 - [x] Accommodation taken care of by hosts — page says guests book nothing
 - [ ] Dinner venue + time (waiting on owner)
 - [x] GitHub Pages static invitation setup (workflow added; remote deployment not yet run)
+- [x] Hide the "Edit with Lovable" badge — published site stays view-only for visitors
+- [x] Remove both photos containing a person; replaced with people-free spa scenes
+- [ ] Rename the spa to "Yora Nordic Spa Kananaskis" everywhere on the invite (rebrand from Oct 30, 2026)
