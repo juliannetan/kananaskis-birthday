@@ -19,7 +19,8 @@ describe('Birthday invitation requirements', () => {
   });
   it('tells guests to book the $173 spa pass themselves', () => {
     expect(invitation.spaPassCad).toBe(173);
-    expect(invitation.spaBookingUrl).toMatch(/^https:\/\/knordicspa\.com\//);
+    expect(invitation.spaBookingUrl).toMatch(/^https:\/\/book\.ondagilysys\.com\//);
+    expect(invitation.spaBookingUrl).toContain('date=2026-11-28');
   });
   it('points guests at the only passes left, the 4pm slots', () => {
     expect(invitation.spaSlotHour).toBe(16);
