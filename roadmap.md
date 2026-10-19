@@ -21,4 +21,4 @@
 - [x] Drive heading reworded in Gen Z / alpha style: "Go west. Mountain maxxing."
 - [x] Whole page reworded in Gen Z / alpha slang (facts, times, prices untouched)
 - [x] "Locked in. Loosely." removed from the Tally intro and the plan heading — now "We'll decide that morning" and "Vibe-based."
-- [x] Hero headline is now "Tyra's birthday. Mountain maxxing." (og:title matches); drive section reworded to "Go west. Scenic maxxing." so the phrase appears once
+- [x] Hero headline is now "Tyra's birthday. Mountain maxxing." (og:title matches); drive section reads "Go west. It's giving mountains." — no slang term used twice in a row
