@@ -44,7 +44,7 @@ function Index() {
         </header>
         <div className="hero-content page-width animate-rise">
           <p className="eyebrow text-gold">Tyra’s birthday era, unlocked</p>
-          <h1>Tyra’s birthday.<br /><em>Mountain maxxing.</em></h1>
+          <h1>Tyra’s birthday<br /><em>Mountain maxxing</em></h1>
           <p className="hero-description">One day in the mountains. One cozy overnight.</p>
           <RsvpLink />
           <a href="#the-plan" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
