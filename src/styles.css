@@ -135,14 +135,14 @@ p { line-height: 1.7; }
 .route-origin { text-align: right; }
 .route-origin svg { margin-left: auto; }
 .route-line h3 { font-size: 25px; margin-top: 12px; }
-.route-line span { font-size: 11px; line-height: 1.6; color: color-mix(in oklab, var(--alpine-muted) 70%, var(--alpine-foreground)); }
+.route-line span { font-size: 11px; line-height: 1.6; color: color-mix(in oklab, var(--alpine-muted) 35%, var(--alpine-foreground)); }
 .route-middle { text-align: center; padding-bottom: 4px; }
 .route-middle > span { font-size: 10px; display: block; }
 .route-track { border-top: 1px dashed var(--alpine-muted); display: flex; justify-content: space-between; margin-block: 14px; padding-top: 8px; }
 .drive-note { display: grid; gap: 16px; border-top: 1px solid var(--alpine-border); margin-top: 30px; padding-block: 22px; }
 .drive-note p { font-size: 14px; }
 .drive-note strong { font-weight: 500; }
-.drive-note > span { font-size: 12.5px; line-height: 1.6; color: color-mix(in oklab, var(--alpine-muted) 70%, var(--alpine-foreground)); }
+.drive-note > span { font-size: 12.5px; line-height: 1.6; color: color-mix(in oklab, var(--alpine-muted) 35%, var(--alpine-foreground)); }
 .map-frame { height: 260px; overflow: hidden; background: var(--alpine-border); }
 .map-frame iframe { width: 100%; height: 100%; border: 0; }
 .directions-link { padding-inline: 0; color: var(--alpine-foreground); font-size: 12px; min-height: 44px; margin-top: 10px; }
