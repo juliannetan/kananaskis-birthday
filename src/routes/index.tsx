@@ -26,7 +26,7 @@ const timeline = [
   { time: "By 3:30pm", title: "Robes on", icon: Waves, note: "Arrive at Yora Nordic Spa and slide into the 4pm session. Hot pool, cold plunge, sauna, repeat. Stay as long as you like. (Only 4pm passes are left, so grab yours now — refundable up to 24 hours before.)" },
   { time: "Whenever we’re ready", title: "Check in. Switch off.", icon: Moon, note: "We’ll pick the place together and split the cost. Until then: drop your bags, get comfortable." },
   { time: "Later that evening", title: "Dinner & a toast to Tyra", icon: Check, note: "Good food, a short toast, and far too much laughing. Dinner spot still being decided." },
-  { time: "Sunday, November 29", title: "A very slow goodbye", icon: Coffee, note: "Coffee. Pajamas. Check out and head home when you’re ready." },
+  { time: "Sunday, November 29", title: "A very slow goodbye", icon: Coffee, note: "Maybe brunch. Maybe a little hike. Maybe neither. Really loose plans — whatever floats. Check out and head home when you’re ready." },
 ];
 
 function RsvpLink({ className = "", children = "RSVP for the birthday" }: { className?: string; children?: React.ReactNode }) {
