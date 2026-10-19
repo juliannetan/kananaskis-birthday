@@ -6,9 +6,13 @@ describe('Birthday invitation requirements', () => {
     expect(invitation.date).toBe('2026-11-28');
     expect(new Date(`${invitation.date}T12:00:00Z`).getUTCDay()).toBe(6);
   });
-  it('leaves around noon and arrives around 1:15pm', () => {
-    expect(invitation.departureHour).toBe(12);
-    expect(invitation.arrivalHour * 60 + invitation.arrivalMinute - invitation.departureHour * 60).toBe(75);
+  it('leaves Calgary around 2pm and reaches the spa by 3:30pm', () => {
+    expect(invitation.departureHour).toBe(14);
+    const minutesAtSpa = invitation.arrivalHour * 60 + invitation.arrivalMinute - invitation.departureHour * 60;
+    expect(invitation.arrivalHour).toBe(15);
+    expect(invitation.arrivalMinute).toBe(30);
+    expect(minutesAtSpa).toBeGreaterThanOrEqual(75);
+    expect(minutesAtSpa).toBeLessThanOrEqual(105);
   });
   it('has accommodation handled by the hosts', () => {
     expect(invitation.accommodationHandled).toBe(true);
