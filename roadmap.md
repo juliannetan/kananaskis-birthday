@@ -26,4 +26,4 @@
 - [x] Drive heading cut to just "Go west."; the two pool photos and their captions removed; "No side quests." removed from the hero line
 - [x] Hero headline "Mountain maxxing." sized to fit one row on iPhone 17 Pro / Pro Max
 - [x] Hero headline periods dropped: "Tyra's birthday" / "Mountain maxxing"
-- [x] Periods dropped across every other heading and caption on the invite
+- [x] Periods dropped across every heading and caption on the invite — "The plan / Vibe-based", "The group chat / In real life", "Go west", "No rush / No drive home tonight", plus eyebrows, timeline titles and the footer line
