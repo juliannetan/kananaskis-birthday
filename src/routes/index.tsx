@@ -33,10 +33,6 @@ function Index() {
       <section className="birthday-hero">
         <img src={hero} alt="Steaming outdoor spa pools surrounded by snowy Kananaskis pines" width={1920} height={1088} fetchPriority="high" className="hero-photo" />
         <div className="hero-veil" />
-        <header className="hero-header page-width">
-          <a className="wordmark" href="#" aria-label="Fun Is the Way, back to top">fun is<br /><span>the way.</span></a>
-          <div className="header-right"><span className="header-date">NOVEMBER 28, 2026</span></div>
-        </header>
         <div className="hero-content page-width animate-rise">
           <p className="eyebrow text-gold">⸻ Well, it’s that time of the year</p>
           <h1>Tyra’s birthday 🌻<br /><em>In the Mountains</em></h1>
