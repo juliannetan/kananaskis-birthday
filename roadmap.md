@@ -49,3 +49,4 @@
 - [x] Tally spa-pass note ($173/person, 4pm booking link, refund line) removed — that detail stays only on the invitation site
 - [x] Hero eyebrow is now "Well, it's that time of the year" and the headline "Tyra's birthday 🌻 / In the mountains" — "Mountain maxxing" retired, og:title updated
 - [x] Hero's second line "In the mountains" is now smaller text (0.62em of the first line) — checked at 375, 402, 440 and desktop
+- [ ] Hero's second line reads "In the Mountains" with a capital M
