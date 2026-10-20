@@ -199,9 +199,6 @@ p { line-height: 1.7; }
   .hero-content .details-rsvp { min-height: 42px; padding: 10px 26px; }
   .rsvp-date { margin-top: 40px; }
   .spa-pass-note { margin-top: 28px; }
-  .site-footer { padding-block: 34px; }
-  .footer-main { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
-  .footer-spa { grid-column: auto; }
 }
 @media (max-width: 374px) {
   .page-width { width: calc(100% - 36px); }
