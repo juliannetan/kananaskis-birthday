@@ -195,7 +195,7 @@ p { line-height: 1.7; }
   .timeline-content > p { font-size: 15px; }
   .rsvp-section { padding-block: 110px; }
   .details-block { grid-auto-flow: column; align-items: end; justify-content: center; gap: 60px; padding-block: 0 52px; }
-  .details-rsvp { min-height: 38px; padding: 8px 22px; margin-bottom: 4px; }
+  .details-rsvp { min-height: 32px; padding: 0 20px; margin-bottom: 0; }
   .rsvp-date { margin-top: 40px; }
   .spa-pass-note { margin-top: 28px; }
   .site-footer { padding-block: 34px; }
