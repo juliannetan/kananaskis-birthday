@@ -66,3 +66,4 @@
 - [x] Itinerary heading stays in view while the list scrolls on wide screens
 - [x] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
 - [x] Dinner note final wording: "Good food, a gentle night, i think." (owner typed it, Oct 20, 2026)
+- [ ] When / Where / Theme block relocated to sit under the hero headline and above the RSVP (placement being confirmed)
