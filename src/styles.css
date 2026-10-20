@@ -183,7 +183,7 @@ p { line-height: 1.7; }
   .route-line span { font-size: 12px; }
   .route-middle > span { font-size: 10px; }
   .drive-note { grid-template-columns: 1fr auto; align-items: center; margin-top: 40px; }
-  .drive-note > span { text-align: right; }
+  .drive-note > span { text-align: left; }
   .map-frame { height: 350px; }
   .day-section { grid-template-columns: 1fr 1.25fr; gap: 90px; padding-block: 110px; }
   .day-heading { position: sticky; top: 64px; align-self: start; }
