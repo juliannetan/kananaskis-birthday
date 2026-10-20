@@ -27,3 +27,4 @@
 - [x] Hero headline "Mountain maxxing." sized to fit one row on iPhone 17 Pro / Pro Max
 - [x] Hero headline periods dropped: "Tyra's birthday" / "Mountain maxxing"
 - [x] Periods dropped across every heading and caption on the invite — "The plan / Vibe-based", "The group chat / In real life", "Go west", "No rush / No drive home tonight", plus eyebrows, timeline titles and the footer line
+- [x] Accommodation flipped to "covered": the host's gift, a stay in Canmore ~40 min from the spa, address sent closer to the date — page, Tally form and facts file all say it
