@@ -41,3 +41,4 @@
 - [ ] Push the whole batch live to funistheway.com (owner to approve)
 - [x] "Less party, more pool" eyebrow removed — the intro opens straight on "The group chat / In real life"
 - [ ] Remove the whole intro section ("The group chat / In real life" + summary line) and retarget the hero's scroll link
+- [ ] Drive heading "Go west" replaced with "Into the Mountains"
