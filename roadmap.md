@@ -71,3 +71,4 @@
 - [x] two em dashes before the hero eyebrow "Well, it's that time of the year"
 - [x] drive destination renamed to "Yora Nordic Spa" (over "Arrive by 3:30pm")
 - [x] drive note cut to two lines and aligned left
+- [ ] hero eyebrow dashes changed to U+2E3B (two-em dash), glyph rendering checked
