@@ -60,7 +60,7 @@ function Index() {
       </section>
 
 
-      <section className="details-block page-width"><div className="detail"><p className="eyebrow text-gold">When</p><p>November 28 – 29</p></div><div className="detail"><p className="eyebrow text-gold">Where</p><p>Kananaskis</p></div><a className="details-rsvp" href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight size={13} aria-hidden="true" /></a></section>
+      <section className="details-block page-width"><div className="detail"><p className="eyebrow text-gold">When</p><p>November 28 – 29</p></div><div className="detail"><p className="eyebrow text-gold">Where</p><p>Kananaskis</p></div><div className="detail"><p className="eyebrow text-gold">Theme</p><p>Spa + mountain maxxing</p></div><a className="details-rsvp" href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight size={13} aria-hidden="true" /></a></section>
 
       <div className="closing-band"><section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><span className="rsvp-date"><strong>See you in the Mountains.</strong><span>November 28 – 29 · Tyra’s Birthday</span></span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 
