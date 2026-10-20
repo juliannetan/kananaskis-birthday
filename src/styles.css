@@ -176,7 +176,6 @@ p { line-height: 1.7; }
   .hero-content h1 { font-size: 86px; }
   .header-date { display: inline; }
   .hero-scroll { margin-top: 40px; }
-  .occasion-location { width: auto; margin-left: auto; }
   .journey-section { padding-block: 88px; }
   .route-line { margin-top: 55px; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr); gap: 40px; }
   .route-line h3 { font-size: 36px; }
