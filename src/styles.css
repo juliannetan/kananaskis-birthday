@@ -81,7 +81,6 @@
   --alpine-border: oklch(0.25 0.025 160 / 20%);
   --hero-veil: linear-gradient(180deg, oklch(0.13 0.025 160 / 32%) 0%, oklch(0.13 0.025 160 / 10%) 30%, oklch(0.15 0.025 160 / 78%) 70%, var(--background) 100%);
   --photo-veil: linear-gradient(180deg, transparent 40%, oklch(0.12 0.02 160 / 80%) 100%);
-  --night-veil: linear-gradient(90deg, oklch(0.13 0.025 160 / 85%), oklch(0.13 0.025 160 / 25%));
 }
 html { scroll-behavior: smooth; scroll-padding-top: 24px; }
 body { margin: 0; -webkit-font-smoothing: antialiased; }
@@ -144,15 +143,8 @@ p { line-height: 1.7; }
 .timeline-time { font-size: 10px; text-transform: uppercase; color: var(--gold); }
 .timeline h3 { font-size: 27px; line-height: 1.15; margin-block: 6px 12px; }
 .timeline-content > p { font-size: 14px; color: var(--muted-foreground); }
+.timeline-content strong { color: var(--foreground); font-weight: 500; }
 .timeline-number { font-size: 10px; color: var(--muted-foreground); padding-top: 8px; }
-.overnight-section { position: relative; min-height: 520px; display: flex; align-items: center; }
-.overnight-section > img, .overnight-veil { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; }
-.overnight-section > img { object-position: 65% center; }
-.overnight-veil { background: var(--night-veil); }
-.overnight-content { position: relative; padding-block: 70px; }
-.overnight-content h2 { max-width: 600px; }
-.overnight-content > p:not(.eyebrow) { font-size: 15px; margin-top: 24px; }
-.overnight-note { display: flex; align-items: center; gap: 10px; font-size: 11px; margin-top: 30px; color: var(--gold); }
 .rsvp-section { text-align: center; padding-block: 80px 72px; }
 .rsvp-mountain { margin: 0 auto 22px; color: var(--gold); }
 .rsvp-section h2 { font-size: 66px; }
@@ -191,7 +183,6 @@ p { line-height: 1.7; }
   .timeline li { gap: 20px; padding-bottom: 42px; }
   .timeline h3 { font-size: 32px; }
   .timeline-content > p { font-size: 15px; }
-  .overnight-section { min-height: 580px; }
   .rsvp-section { padding-block: 110px; }
   .rsvp-section h2 { font-size: 82px; }
   .footer-main { grid-template-columns: 1fr 1fr auto; align-items: center; }
