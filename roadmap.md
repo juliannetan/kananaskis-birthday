@@ -40,5 +40,5 @@
 - [x] Itinerary trimmed to 5: "Check in", "Brunch" (with "Stay the day and leave as late as we'd like"), and the "A very slow goodbye" entry deleted
 - [ ] Push the whole batch live to funistheway.com (owner to approve)
 - [x] "Less party, more pool" eyebrow removed — the intro opens straight on "The group chat / In real life"
-- [ ] Remove the whole intro section ("The group chat / In real life" + summary line) and retarget the hero's scroll link
-- [ ] Drive heading "Go west" replaced with "Into the Mountains"
+- [x] Intro section ("The group chat / In real life" + summary line) removed entirely — hero scroll link retargeted to the itinerary
+- [x] Drive heading "Go west" replaced with "Into the Mountains"
