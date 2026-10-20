@@ -26,9 +26,6 @@ const timeline = [
   { time: "Sunday, November 29", title: "Brunch", icon: Coffee, note: "Really loose — maybe brunch, maybe a short hike. Stay the day and leave as late as we’d like." },
 ];
 
-function RsvpLink({ className = "", children = "RSVP" }: { className?: string; children?: React.ReactNode }) {
-  return <Button asChild className={`invitation-button ${className}`}><a href={invitation.tallyUrl} target="_blank" rel="noreferrer">{children}<ArrowUpRight aria-hidden="true" /></a></Button>;
-}
 
 function Index() {
   return (
@@ -38,13 +35,12 @@ function Index() {
         <div className="hero-veil" />
         <header className="hero-header page-width">
           <a className="wordmark" href="#" aria-label="Fun Is the Way, back to top">fun is<br /><span>the way.</span></a>
-          <div className="header-right"><span className="header-date">NOVEMBER 28, 2026</span><Button asChild variant="ghost" className="header-rsvp"><a href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight /></a></Button></div>
+          <div className="header-right"><span className="header-date">NOVEMBER 28, 2026</span></div>
         </header>
         <div className="hero-content page-width animate-rise">
           <p className="eyebrow text-gold">Well, it’s that time of the year</p>
           <h1>Tyra’s birthday 🌻<br /><em>In the Mountains</em></h1>
-          <div className="details-block"><div className="detail"><p className="eyebrow text-gold">When</p><p>November 28 – 29</p></div><div className="detail"><p className="eyebrow text-gold">Where</p><p>Kananaskis</p></div><div className="detail"><p className="eyebrow text-gold">Theme</p><p>Spa + mountain maxxing</p></div></div>
-          <RsvpLink />
+          <div className="details-block"><div className="detail"><p className="eyebrow text-gold">When</p><p>November 28 – 29</p></div><div className="detail"><p className="eyebrow text-gold">Where</p><p>Kananaskis</p></div><div className="detail"><p className="eyebrow text-gold">Theme</p><p>Spa + mountain maxxing</p></div><a className="details-rsvp" href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight size={13} aria-hidden="true" /></a></div>
           <a href="#the-day" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
         </div>
       </section>
