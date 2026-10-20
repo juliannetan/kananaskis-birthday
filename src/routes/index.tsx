@@ -48,7 +48,7 @@ function Index() {
         </div>
       </section>
 
-      <div className="occasion-strip"><div className="page-width occasion-inner"><span>Saturday, November 28</span><span className="occasion-dot">·</span><span>Spa + sleepover</span><span className="occasion-location"><MapPin size={14} /> Kananaskis, Alberta</span></div></div>
+      <div className="occasion-strip"><div className="page-width occasion-inner"><span>November 28 – 29</span><span className="occasion-dot">·</span><span>Spa + mountain maxxing</span><span className="occasion-location"><MapPin size={14} /> Kananaskis, Alberta</span></div></div>
 
 
 

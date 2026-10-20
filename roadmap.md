@@ -64,3 +64,4 @@
 - [ ] Whitespace tightened mobile-first + footer seam cleaned so the page ends in one panel
 - [ ] Itinerary sub-line "There's a direction / There's no schedule" removed
 - [ ] Itinerary heading stays in view while the list scrolls on wide screens
+- [ ] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
