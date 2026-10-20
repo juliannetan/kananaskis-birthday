@@ -75,4 +75,4 @@
 - [ ] hero details in two columns: When | Where, then Theme | RSVP
 - [x] Footer cut: the "fun is the way." mark and the "Yora Nordic Spa Kananaskis" link are gone — the page now ends on the closing band
 - [x] Header cut: the "fun is / the way." wordmark and the "NOVEMBER 28, 2026" date are gone — the hero opens straight on the invitation
-- [x] Check-in grammar fixed: "Your accommodation has already been taken care of, and it's my gift"
+- [x] Check-in wording reverted to the owner's own phrasing: "Your accommodation is already taken care of, and it's my gift"
