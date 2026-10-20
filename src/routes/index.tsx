@@ -58,7 +58,7 @@ function Index() {
 
       <div className="closing-band"><section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><span className="rsvp-date"><strong>See you in the Mountains.</strong><span>November 28 – 29 · Tyra’s Birthday</span></span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 
-      <footer className="site-footer page-width"><div className="footer-main"><a href="#" className="wordmark">fun is<br /><span>the way.</span></a><a href="https://knordicspa.com/" target="_blank" rel="noreferrer" className="footer-spa">Yora Nordic Spa Kananaskis <ArrowUpRight size={14} /></a></div></footer></div>
+      </div>
     </main>
   );
 }
