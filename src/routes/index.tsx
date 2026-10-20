@@ -41,8 +41,8 @@ function Index() {
           <div className="header-right"><span className="header-date">NOVEMBER 28, 2026</span><Button asChild variant="ghost" className="header-rsvp"><a href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight /></a></Button></div>
         </header>
         <div className="hero-content page-width animate-rise">
-          <p className="eyebrow text-gold">Tyra’s birthday era, unlocked</p>
-          <h1>Tyra’s birthday<br /><em>Mountain maxxing</em></h1>
+          <p className="eyebrow text-gold">Well, it’s that time of the year</p>
+          <h1>Tyra’s birthday 🌻<br /><em>In the mountains</em></h1>
           <RsvpLink />
           <a href="#the-day" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
         </div>
