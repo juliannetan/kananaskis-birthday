@@ -33,3 +33,4 @@
 - [x] "Stay a little longer / No rush / Sleeping in Canmore" overnight section cut — the evening photo is off the page
 - [x] RSVP heading now "Are you coming?"; closing sign-off enlarged ("LET'S MAKE THIS WEEKEND MEMORABLE" over "November 28 – 29 · Tyra's Birthday"); dinner entry is "Until hopefully-not-so-late / Dinner / Good food, fun gentle night, i think"
 - [x] Footer sign-off "See you in the Mountains / November 28 – 29 · Tyra's Birthday" removed — the footer is just the wordmark and the spa link
+- [x] Check-in line now ends "…about 40 minutes from the spa; I'll send the address closer to the date" — "Drop your bags, get comfortable" cut
