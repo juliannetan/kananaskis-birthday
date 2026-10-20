@@ -50,3 +50,19 @@
 - [x] Hero eyebrow is now "Well, it's that time of the year" and the headline "Tyra's birthday 🌻 / In the mountains" — "Mountain maxxing" retired, og:title updated
 - [x] Hero's second line "In the mountains" is now smaller text (0.62em of the first line) — checked at 375, 402, 440 and desktop
 - [x] Hero's second line reads "In the Mountains" with a capital M
+- [x] Drive section heading cut — it's now just the eyebrow "The drive" over "Calgary to Yora Nordic Spa Kananaskis" (no "Into the Mountains", no "Less city, more steam"), stacked left-aligned on phone and desktop
+- [x] RSVP section heading/copy/button removed and the closing line swapped to "See you in the Mountains." over "November 28 – 29 · Tyra's Birthday"
+- [x] Button wording "RSVP for the birthday" shortened to just "RSVP"
+- [x] Closing line "See you in the Mountains." set in italic
+- [x] Date line "November 28 – 29 · Tyra's Birthday" enlarged (12px → 14px)
+- [x] Hero eyebrow "Well, it's that time of the year" enlarged (11px → 13px, hero only — other eyebrows untouched)
+- [x] Background/palette retinted: more luxurious, feminine but unisex — Hermès / Dior / high-fashion feel
+- [x] Cocoa retint rejected ("dont like this color, make it lighter and different") — now going light: pale shell/ivory base, espresso ink text, antique gold accent
+- [x] Divider + its own tinted band above "See you in the Mountains." (band in, divider needs to be clearly visible)
+- [x] Drive heading block removed ("The drive" + "Calgary to Yora Nordic Spa Kananaskis") — the section opens on the route line
+- [x] Drive note "Can't make the 2pm send-off? … we'll be waiting for you at the spa." removed (duplicates the Arrivals entry)
+- [x] Whitespace tightened mobile-first + footer seam cleaned so the page ends in one panel
+- [x] Itinerary sub-line "There's a direction / There's no schedule" removed
+- [x] Itinerary heading stays in view while the list scrolls on wide screens
+- [x] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
+- [x] Dinner note final wording: "Good food, a gentle night, i think." (owner typed it, Oct 20, 2026)

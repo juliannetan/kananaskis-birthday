@@ -22,11 +22,11 @@ const timeline = [
   { time: "Around 2pm", title: "Arrivals", icon: Car, note: "We’re carpooling out of Calgary around 2pm. Can’t make it? No worries at all — we’ll see you at the spa." },
   { time: "By 3:30pm", title: "Spa and chill", icon: Waves, note: "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." },
   { time: "Whenever we’re ready", title: "Check in", icon: Moon, note: <><strong>Your accommodation is already taken care of, and it’s my gift</strong> — a place in Canmore, about 40 minutes from the spa; I’ll send the address closer to the date.</> },
-  { time: "Until hopefully-not-so-late", title: "Dinner", icon: Check, note: "Good food, fun gentle night, i think" },
+  { time: "Until hopefully-not-so-late", title: "Dinner", icon: Check, note: "Good food, a gentle night, i think." },
   { time: "Sunday, November 29", title: "Brunch", icon: Coffee, note: "Really loose — maybe brunch, maybe a short hike. Stay the day and leave as late as we’d like." },
 ];
 
-function RsvpLink({ className = "", children = "RSVP for the birthday" }: { className?: string; children?: React.ReactNode }) {
+function RsvpLink({ className = "", children = "RSVP" }: { className?: string; children?: React.ReactNode }) {
   return <Button asChild className={`invitation-button ${className}`}><a href={invitation.tallyUrl} target="_blank" rel="noreferrer">{children}<ArrowUpRight aria-hidden="true" /></a></Button>;
 }
 
@@ -48,25 +48,25 @@ function Index() {
         </div>
       </section>
 
-      <div className="occasion-strip"><div className="page-width occasion-inner"><span>Saturday, November 28</span><span className="occasion-dot">·</span><span>Spa + sleepover</span><span className="occasion-location"><MapPin size={14} /> Kananaskis, Alberta</span></div></div>
+      <div className="occasion-strip"><div className="page-width occasion-inner"><span>November 28 – 29</span><span className="occasion-dot">·</span><span>Spa + mountain maxxing</span><span className="occasion-location"><MapPin size={14} /> Kananaskis, Alberta</span></div></div>
 
 
 
       <Journey />
 
       <section className="day-section page-width" id="the-day">
-        <div className="day-heading"><p className="eyebrow text-gold">November 28 → 29</p><h2>The plan<br /><em>Vibe-based</em></h2><p>There’s a direction<br />There’s no schedule</p></div>
+        <div className="day-heading"><p className="eyebrow text-gold">November 28 → 29</p><h2>The plan<br /><em>Vibe-based</em></h2></div>
         <ol className="timeline">{timeline.map(({ time, title, note, icon: Icon }, index) => <li key={title}><div className="timeline-mark"><Icon size={18} strokeWidth={1.3} aria-hidden="true" /></div><div className="timeline-content"><span className="timeline-time">{time}</span><h3>{title}</h3><p>{note}</p></div><span className="timeline-number">0{index + 1}</span></li>)}</ol>
       </section>
 
 
-      <section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><p className="eyebrow text-gold">Save your spot</p><h2>Are you<br /><em>coming?</em></h2><p>Tyra deserves this. Frankly, so do you. All we need from you is an RSVP — that’s the whole ask.</p><RsvpLink>Count me in (or out)</RsvpLink><span className="rsvp-date"><strong>LET’S MAKE THIS WEEKEND MEMORABLE</strong><span>November 28 – 29 · Tyra’s Birthday</span></span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
+      <div className="closing-band"><section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><span className="rsvp-date"><strong>See you in the Mountains.</strong><span>November 28 – 29 · Tyra’s Birthday</span></span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 
-      <footer className="site-footer page-width"><div className="footer-main"><a href="#" className="wordmark">fun is<br /><span>the way.</span></a><a href="https://knordicspa.com/" target="_blank" rel="noreferrer" className="footer-spa">Yora Nordic Spa Kananaskis <ArrowUpRight size={14} /></a></div></footer>
+      <footer className="site-footer page-width"><div className="footer-main"><a href="#" className="wordmark">fun is<br /><span>the way.</span></a><a href="https://knordicspa.com/" target="_blank" rel="noreferrer" className="footer-spa">Yora Nordic Spa Kananaskis <ArrowUpRight size={14} /></a></div></footer></div>
     </main>
   );
 }
 
 function Journey() {
-  return <section className="journey-section" id="the-drive"><div className="page-width"><div className="journey-heading"><div><p className="eyebrow">The drive</p><h2>Into the Mountains</h2></div><p>Calgary to Yora Nordic Spa Kananaskis<br />Less city, more steam</p></div><div className="route-line"><div className="route-origin"><MapPin size={24} strokeWidth={1.2} /><h3>Calgary</h3><span>Leave around 2pm</span></div><div className="route-middle"><span>HWY 1 → HWY 40 SOUTH</span><div className="route-track"><Car size={22} /><ArrowRight size={22} /></div><span>~100 KM · ~1 HR 15 MIN</span></div><div className="route-destination"><Mountain size={24} strokeWidth={1.2} /><h3>Kananaskis</h3><span>Arrive by 3:30pm</span></div></div><div className="drive-note"><p>Can’t make the 2pm send-off? Genuinely no worries.<br /><strong>We’ll be waiting for you at the spa.</strong></p><span>Same place you know, new name. Google still lists it as Kananaskis Nordic Spa.<br />Approximate drive from central Calgary. November roads may add a little time.<br />Kananaskis charges a conservation pass — $15 per vehicle per day. Carpools are a W.</span></div><div className="map-frame"><iframe title="Map from Calgary to Yora Nordic Spa Kananaskis" src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Yora+Nordic+Spa,+Kananaskis+Village,+AB&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><Button asChild variant="link" className="directions-link"><a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Yora+Nordic+Spa,+Kananaskis+Village,+AB" target="_blank" rel="noreferrer">Open directions <ArrowUpRight /></a></Button></div></section>;
+  return <section className="journey-section" id="the-drive"><div className="page-width"><div className="route-line"><div className="route-origin"><MapPin size={24} strokeWidth={1.2} /><h3>Calgary</h3><span>Leave around 2pm</span></div><div className="route-middle"><span>HWY 1 → HWY 40 SOUTH</span><div className="route-track"><Car size={22} /><ArrowRight size={22} /></div><span>~100 KM · ~1 HR 15 MIN</span></div><div className="route-destination"><Mountain size={24} strokeWidth={1.2} /><h3>Kananaskis</h3><span>Arrive by 3:30pm</span></div></div><div className="drive-note"><span>Same place you know, new name. Google still lists it as Kananaskis Nordic Spa.<br />Approximate drive from central Calgary. November roads may add a little time.<br />Kananaskis charges a conservation pass — $15 per vehicle per day. Carpools are a W.</span></div><div className="map-frame"><iframe title="Map from Calgary to Yora Nordic Spa Kananaskis" src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Yora+Nordic+Spa,+Kananaskis+Village,+AB&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><Button asChild variant="link" className="directions-link"><a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Yora+Nordic+Spa,+Kananaskis+Village,+AB" target="_blank" rel="noreferrer">Open directions <ArrowUpRight /></a></Button></div></section>;
 }
