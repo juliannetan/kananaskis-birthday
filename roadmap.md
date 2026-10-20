@@ -36,3 +36,6 @@
 - [x] Check-in line now ends "…about 40 minutes from the spa; I'll send the address closer to the date" — "Drop your bags, get comfortable" cut
 - [x] Spa timeline entry is now "Spa and chill" with "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." (replaces "Robes on, world off")
 - [x] Hero tagline "One day in the mountains. One cozy overnight." removed — the hero is now the eyebrow, the headline, the RSVP button and the scroll link
+- [x] First itinerary entry is now "Arrivals" — carpooling out of Calgary around 2pm, missing it is no worries, we'll see you at the spa
+- [x] Itinerary trimmed to 5: "Check in", "Brunch" (with "Stay the day and leave as late as we'd like"), and the "A very slow goodbye" entry deleted
+- [ ] Push the whole batch live to funistheway.com (owner to approve)
