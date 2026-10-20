@@ -44,16 +44,12 @@ function Index() {
           <p className="eyebrow text-gold">Tyra’s birthday era, unlocked</p>
           <h1>Tyra’s birthday<br /><em>Mountain maxxing</em></h1>
           <RsvpLink />
-          <a href="#the-plan" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
+          <a href="#the-day" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
         </div>
       </section>
 
       <div className="occasion-strip"><div className="page-width occasion-inner"><span>Saturday, November 28</span><span className="occasion-dot">·</span><span>Spa + sleepover</span><span className="occasion-location"><MapPin size={14} /> Kananaskis, Alberta</span></div></div>
 
-      <section id="the-plan" className="intro-section page-width">
-        <div><h2>The group chat<br /><em>In real life</em></h2></div>
-        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis — the group chat’s one honest attempt at being wellness people.</p><p>The plan, in full: leave Calgary around 2pm, at the spa by 3:30pm, soak as long as we like. Then dinner, a night in Canmore, and a slow Sunday — maybe brunch, maybe a little hike, whatever floats. That’s it. That’s the itinerary.</p><span className="tiny-signoff">With love, the birthday crew</span></div>
-      </section>
 
 
       <Journey />
@@ -72,5 +68,5 @@ function Index() {
 }
 
 function Journey() {
-  return <section className="journey-section" id="the-drive"><div className="page-width"><div className="journey-heading"><div><p className="eyebrow">The drive</p><h2>Go west</h2></div><p>Calgary to Yora Nordic Spa Kananaskis<br />Less city, more steam</p></div><div className="route-line"><div className="route-origin"><MapPin size={24} strokeWidth={1.2} /><h3>Calgary</h3><span>Leave around 2pm</span></div><div className="route-middle"><span>HWY 1 → HWY 40 SOUTH</span><div className="route-track"><Car size={22} /><ArrowRight size={22} /></div><span>~100 KM · ~1 HR 15 MIN</span></div><div className="route-destination"><Mountain size={24} strokeWidth={1.2} /><h3>Kananaskis</h3><span>Arrive by 3:30pm</span></div></div><div className="drive-note"><p>Can’t make the 2pm send-off? Genuinely no worries.<br /><strong>We’ll be waiting for you at the spa.</strong></p><span>Same place you know, new name. Google still lists it as Kananaskis Nordic Spa.<br />Approximate drive from central Calgary. November roads may add a little time.<br />Kananaskis charges a conservation pass — $15 per vehicle per day. Carpools are a W.</span></div><div className="map-frame"><iframe title="Map from Calgary to Yora Nordic Spa Kananaskis" src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Yora+Nordic+Spa,+Kananaskis+Village,+AB&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><Button asChild variant="link" className="directions-link"><a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Yora+Nordic+Spa,+Kananaskis+Village,+AB" target="_blank" rel="noreferrer">Open directions <ArrowUpRight /></a></Button></div></section>;
+  return <section className="journey-section" id="the-drive"><div className="page-width"><div className="journey-heading"><div><p className="eyebrow">The drive</p><h2>Into the Mountains</h2></div><p>Calgary to Yora Nordic Spa Kananaskis<br />Less city, more steam</p></div><div className="route-line"><div className="route-origin"><MapPin size={24} strokeWidth={1.2} /><h3>Calgary</h3><span>Leave around 2pm</span></div><div className="route-middle"><span>HWY 1 → HWY 40 SOUTH</span><div className="route-track"><Car size={22} /><ArrowRight size={22} /></div><span>~100 KM · ~1 HR 15 MIN</span></div><div className="route-destination"><Mountain size={24} strokeWidth={1.2} /><h3>Kananaskis</h3><span>Arrive by 3:30pm</span></div></div><div className="drive-note"><p>Can’t make the 2pm send-off? Genuinely no worries.<br /><strong>We’ll be waiting for you at the spa.</strong></p><span>Same place you know, new name. Google still lists it as Kananaskis Nordic Spa.<br />Approximate drive from central Calgary. November roads may add a little time.<br />Kananaskis charges a conservation pass — $15 per vehicle per day. Carpools are a W.</span></div><div className="map-frame"><iframe title="Map from Calgary to Yora Nordic Spa Kananaskis" src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Yora+Nordic+Spa,+Kananaskis+Village,+AB&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><Button asChild variant="link" className="directions-link"><a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Yora+Nordic+Spa,+Kananaskis+Village,+AB" target="_blank" rel="noreferrer">Open directions <ArrowUpRight /></a></Button></div></section>;
 }
