@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowDown, ArrowRight, Mountain, MapPin, Car, Waves, Moon, Coffee, Check, Sunrise } from "lucide-react";
+import { ArrowUpRight, ArrowDown, ArrowRight, Mountain, MapPin, Car, Waves, Moon, Coffee, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { invitation } from "@/lib/invitation";
 import hero from "@/assets/hero.jpg";
@@ -21,10 +21,9 @@ export const Route = createFileRoute("/")({
 const timeline = [
   { time: "Around 2pm", title: "Arrivals", icon: Car, note: "We’re carpooling out of Calgary around 2pm. Can’t make it? No worries at all — we’ll see you at the spa." },
   { time: "By 3:30pm", title: "Spa and chill", icon: Waves, note: "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." },
-  { time: "Whenever we’re ready", title: "Check in, switch off", icon: Moon, note: <><strong>Your accommodation is already taken care of, and it’s my gift</strong> — a place in Canmore, about 40 minutes from the spa; I’ll send the address closer to the date.</> },
+  { time: "Whenever we’re ready", title: "Check in", icon: Moon, note: <><strong>Your accommodation is already taken care of, and it’s my gift</strong> — a place in Canmore, about 40 minutes from the spa; I’ll send the address closer to the date.</> },
   { time: "Until hopefully-not-so-late", title: "Dinner", icon: Check, note: "Good food, fun gentle night, i think" },
-  { time: "Sunday, November 29", title: "Brunch, or a little hike", icon: Coffee, note: "Really loose — maybe brunch, maybe a short hike, maybe neither. Whatever floats." },
-  { time: "Then, whenever", title: "A very slow goodbye", icon: Sunrise, note: "Check out, hugs, and the drive home. No alarm-clock energy — we leave when we leave." },
+  { time: "Sunday, November 29", title: "Brunch", icon: Coffee, note: "Really loose — maybe brunch, maybe a short hike. Stay the day and leave as late as we’d like." },
 ];
 
 function RsvpLink({ className = "", children = "RSVP for the birthday" }: { className?: string; children?: React.ReactNode }) {
