@@ -144,7 +144,7 @@ p { line-height: 1.7; }
 .route-track { border-top: 1px dashed var(--alpine-muted); display: flex; justify-content: space-between; margin-block: 14px; padding-top: 8px; }
 .drive-note { display: grid; gap: 12px; border-top: 1px solid var(--alpine-border); margin-top: 18px; padding-block: 16px; }
 .drive-note > span { font-size: 12.5px; line-height: 1.6; color: color-mix(in oklab, var(--alpine-muted) 35%, var(--alpine-foreground)); }
-.map-frame { height: 260px; overflow: hidden; background: var(--alpine-border); }
+.map-frame { height: 260px; overflow: hidden; background: var(--alpine-border);  margin-top: 18px; }
 .map-frame iframe { width: 100%; height: 100%; border: 0; filter: grayscale(1) sepia(.22) contrast(.96) brightness(1.03); }
 .directions-link { padding-inline: 0; color: var(--alpine-foreground); font-size: 12px; min-height: 44px; margin-top: 10px; }
 .day-section { display: grid; gap: 26px; padding-block: 52px; }
@@ -184,6 +184,7 @@ p { line-height: 1.7; }
   .route-middle > span { font-size: 10px; }
   .drive-note { grid-template-columns: 1fr auto; align-items: center; margin-top: 40px; }
   .drive-note > span { text-align: left; }
+  .map-frame { margin-top: 26px; }
   .map-frame { height: 350px; }
   .day-section { grid-template-columns: 1fr 1.25fr; gap: 90px; padding-block: 110px; }
   .day-heading { position: sticky; top: 64px; align-self: start; }
