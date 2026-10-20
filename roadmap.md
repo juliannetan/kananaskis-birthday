@@ -43,3 +43,4 @@
 - [x] Intro section ("The group chat / In real life" + summary line) removed entirely — hero scroll link retargeted to the itinerary
 - [x] Drive heading "Go west" replaced with "Into the Mountains"
 - [x] Tally form description simplified to the RSVP-only wording with the 😉 and 🌻 lines; spa-pass note and all questions kept
+- [x] Tally "Dietary needs, a ride, or anything else?" question removed — the form now ends at "Arriving later? Rough time?"
