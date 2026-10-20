@@ -69,3 +69,7 @@
 - [x] When / Where / Theme block moved into the hero above the RSVP, ending in one rounded RSVP pill; header RSVP, hero filled button and the duplicate occasion strip all removed
 - [x] RSVP pill on its own row below When/Where/Theme, filled with a different shade
 - [x] two em dashes before the hero eyebrow "Well, it's that time of the year"
+- [x] drive destination renamed to "Yora Nordic Spa" (over "Arrive by 3:30pm")
+- [x] drive note cut to two lines and aligned left
+- [ ] hero eyebrow dashes changed to U+2E3B (two-em dash), glyph rendering checked
+- [ ] hero details in two columns: When | Where, then Theme | RSVP
