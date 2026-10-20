@@ -46,4 +46,4 @@
 - [x] Tally "Dietary needs, a ride, or anything else?" question removed — the form now ends at "Arriving later? Rough time?"
 - [x] Tally opening simplified to "Tyra's birthday 💥" + the RSVP line + the memorable line (date/venue line dropped)
 - [x] Tally questions collapsed to three: "What's your name" (required), "What's your email?" (required), "Are you coming? 🫶" (Yes / No)
-- [ ] Tally spa-pass note ($173/person, 4pm booking link, refund line) removed — that detail stays only on the invitation site
+- [x] Tally spa-pass note ($173/person, 4pm booking link, refund line) removed — that detail stays only on the invitation site
