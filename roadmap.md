@@ -44,3 +44,5 @@
 - [x] Drive heading "Go west" replaced with "Into the Mountains"
 - [x] Tally form description simplified to the RSVP-only wording with the 😉 and 🌻 lines; spa-pass note and all questions kept
 - [x] Tally "Dietary needs, a ride, or anything else?" question removed — the form now ends at "Arriving later? Rough time?"
+- [x] Tally opening simplified to "Tyra's birthday 💥" + the RSVP line + the memorable line (date/venue line dropped)
+- [ ] Tally questions collapsed to three: "What's your name" (required), "What's your email?" (required), "Are you coming? 🫶" (Yes / No) — drop last name, getting-there and rough-time
