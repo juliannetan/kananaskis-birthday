@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Tyra’s Birthday · November 28 — Fun Is the Way" },
       { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around 2pm, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
-      { property: "og:title", content: "Tyra’s Birthday — Mountain Maxxing" },
+      { property: "og:title", content: "Tyra’s Birthday 🌻 — In the Mountains" },
       { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with the group chat. Stay in Canmore covered as a birthday gift. RSVP with Tally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
