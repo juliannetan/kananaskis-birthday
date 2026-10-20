@@ -65,7 +65,7 @@
 - [x] Itinerary sub-line "There's a direction / There's no schedule" removed
 - [x] Itinerary heading stays in view while the list scrolls on wide screens
 - [x] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
-- [x] Dinner note final wording: "Good food, a gentle night, i think." (owner typed it, Oct 20, 2026)
+- [x] Dinner note final wording: "Good food, a gentle night, I think." (owner typed it, capital I per her request, Oct 20, 2026)
 - [x] When / Where / Theme block moved into the hero above the RSVP, ending in one rounded RSVP pill; header RSVP, hero filled button and the duplicate occasion strip all removed
 - [x] RSVP pill on its own row below When/Where/Theme, filled with a different shade
 - [x] two em dashes before the hero eyebrow "Well, it's that time of the year"
