@@ -72,3 +72,4 @@
 - [x] drive destination renamed to "Yora Nordic Spa" (over "Arrive by 3:30pm")
 - [x] drive note cut to two lines and aligned left
 - [ ] hero eyebrow dashes changed to U+2E3B (two-em dash), glyph rendering checked
+- [ ] hero details in two columns: When | Where, then Theme | RSVP

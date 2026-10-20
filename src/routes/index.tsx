@@ -40,8 +40,7 @@ function Index() {
         <div className="hero-content page-width animate-rise">
           <p className="eyebrow text-gold">⸻ Well, it’s that time of the year</p>
           <h1>Tyra’s birthday 🌻<br /><em>In the Mountains</em></h1>
-          <div className="details-block"><div className="detail"><p className="eyebrow text-gold">When</p><p>November 28 – 29</p></div><div className="detail"><p className="eyebrow text-gold">Where</p><p>Kananaskis</p></div><div className="detail"><p className="eyebrow text-gold">Theme</p><p>Spa + mountain maxxing</p></div></div>
-          <a className="details-rsvp" href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight size={13} aria-hidden="true" /></a>
+          <div className="details-block"><div className="detail"><p className="eyebrow text-gold">When</p><p>November 28 – 29</p></div><div className="detail"><p className="eyebrow text-gold">Where</p><p>Kananaskis</p></div><div className="detail"><p className="eyebrow text-gold">Theme</p><p>Spa + mountain maxxing</p></div><div className="detail detail-rsvp"><a className="details-rsvp" href={invitation.tallyUrl} target="_blank" rel="noreferrer">RSVP <ArrowUpRight size={13} aria-hidden="true" /></a></div></div>
           <a href="#the-day" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
         </div>
       </section>
