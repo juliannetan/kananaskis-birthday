@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       { title: "Tyra’s Birthday · November 28 — Fun Is the Way" },
       { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around 2pm, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
       { property: "og:title", content: "Tyra’s Birthday — Mountain Maxxing" },
-      { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with the group chat. Accommodation split between the crew. RSVP with Tally." },
+      { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with the group chat. Stay in Canmore covered as a birthday gift. RSVP with Tally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
 const timeline = [
   { time: "Around 2pm", title: "Out we go", icon: Car, note: "Leave Calgary, head west, watch the mountains get big. Can’t make 2pm? Genuinely no stress — we’ll be at the spa. Come find us." },
   { time: "By 3:30pm", title: "Robes on, world off", icon: Waves, note: "Arrive at Yora Nordic Spa and slide into the 4pm session. Hot pool, cold plunge, sauna, repeat — the loop is the whole point. Stay as long as you like. (Only 4pm passes are left, so grab yours now — refundable up to 24 hours before.)" },
-  { time: "Whenever we’re ready", title: "Check in, switch off", icon: Moon, note: "We’ll pick the place together and split the cost. Until then: drop your bags, get comfortable." },
+  { time: "Whenever we’re ready", title: "Check in, switch off", icon: Moon, note: "Stay’s sorted — a place in Canmore, about 40 minutes from the spa. Drop your bags, get comfortable." },
   { time: "Later that evening", title: "Dinner & a toast to Tyra", icon: Check, note: "Good food, a short toast, far too much laughing. Tyra’s the main character tonight. Dinner spot still being decided." },
   { time: "Sunday, November 29", title: "Brunch, or a little hike", icon: Coffee, note: "Really loose — maybe brunch, maybe a short hike, maybe neither. Whatever floats." },
   { time: "Then, whenever", title: "A very slow goodbye", icon: Sunrise, note: "Check out, hugs, and the drive home. No alarm-clock energy — we leave when we leave." },
@@ -55,7 +55,7 @@ function Index() {
 
       <section id="the-plan" className="intro-section page-width">
         <div><p className="eyebrow text-gold">Less party, more pool</p><h2>The group chat<br /><em>In real life</em></h2></div>
-        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis — the group chat’s one honest attempt at being wellness people.</p><p>The plan, in full: leave Calgary around 2pm, at the spa by 3:30pm, soak as long as we like. Then dinner, a cozy overnight, and a slow Sunday — maybe brunch, maybe a little hike, whatever floats. That’s it. That’s the itinerary.</p><span className="tiny-signoff">With love, the birthday crew</span></div>
+        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis — the group chat’s one honest attempt at being wellness people.</p><p>The plan, in full: leave Calgary around 2pm, at the spa by 3:30pm, soak as long as we like. Then dinner, a night in Canmore, and a slow Sunday — maybe brunch, maybe a little hike, whatever floats. That’s it. That’s the itinerary.</p><span className="tiny-signoff">With love, the birthday crew</span></div>
       </section>
 
 
@@ -66,7 +66,7 @@ function Index() {
         <ol className="timeline">{timeline.map(({ time, title, note, icon: Icon }, index) => <li key={title}><div className="timeline-mark"><Icon size={18} strokeWidth={1.3} aria-hidden="true" /></div><div className="timeline-content"><span className="timeline-time">{time}</span><h3>{title}</h3><p>{note}</p></div><span className="timeline-number">0{index + 1}</span></li>)}</ol>
       </section>
 
-      <section className="overnight-section"><img src={night.url} alt="Warmly lit sauna buildings and outdoor pools at Yora Nordic Spa in the evening" width={1024} height={683} loading="lazy" /><div className="overnight-veil" /><div className="page-width overnight-content"><p className="eyebrow text-gold">Stay a little longer</p><h2>No rush<br /><em>No drive home tonight</em></h2><p>We’re staying the night nearby<br />Where exactly? We’ll pick it together — and split the cost.</p><div className="overnight-note"><Check size={16} /> Your only job: book the spa pass. We’ll sort the rest together.</div></div></section>
+      <section className="overnight-section"><img src={night.url} alt="Warmly lit sauna buildings and outdoor pools at Yora Nordic Spa in the evening" width={1024} height={683} loading="lazy" /><div className="overnight-veil" /><div className="page-width overnight-content"><p className="eyebrow text-gold">Stay a little longer</p><h2>No rush<br /><em>No drive home tonight</em></h2><p>Sleeping in Canmore, about 40 minutes from the spa<br />The stay’s my gift — address lands closer to the day</p><div className="overnight-note"><Check size={16} /> Your only job: book the spa pass. Everything else is handled.</div></div></section>
 
       <section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><p className="eyebrow text-gold">Save your spot</p><h2>You coming<br /><em>or what?</em></h2><p>Tyra deserves this. Frankly, so do you. All we need from you is an RSVP — that’s the whole ask.</p><RsvpLink>Count me in (or out)</RsvpLink><span className="rsvp-date">NOVEMBER 28 · AROUND 2PM · LET’S MAKE THIS WEEKEND MEMORABLE</span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 

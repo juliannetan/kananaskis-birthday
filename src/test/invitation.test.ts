@@ -14,10 +14,13 @@ describe('Birthday invitation requirements', () => {
     expect(minutesAtSpa).toBeGreaterThanOrEqual(75);
     expect(minutesAtSpa).toBeLessThanOrEqual(105);
   });
-  it('splits the accommodation and picks it together', () => {
-    expect(invitation.accommodationSplit).toBe(true);
-    expect(invitation.accommodationDecided).toBe(false);
+  it('has the host covering the stay in Canmore, a 40 minute ride away', () => {
+    expect(invitation.accommodationCovered).toBe(true);
+    expect(invitation.accommodationTown).toBe('Canmore');
+    expect(invitation.accommodationDriveMinutes).toBe(40);
+    expect(invitation.accommodationAddressTiming).toBe('closer to the date');
   });
+
   it('tells guests to book the $173 spa pass themselves', () => {
     expect(invitation.spaPassCad).toBe(173);
     expect(invitation.spaBookingUrl).toMatch(/^https:\/\/book\.onagilysys\.com\//);
