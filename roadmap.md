@@ -71,9 +71,10 @@
 - [x] two em dashes before the hero eyebrow "Well, it's that time of the year"
 - [x] drive destination renamed to "Yora Nordic Spa" (over "Arrive by 3:30pm")
 - [x] drive note cut to two lines and aligned left
-- [ ] hero eyebrow dashes changed to U+2E3B (two-em dash), glyph rendering checked
-- [ ] hero details in two columns: When | Where, then Theme | RSVP
+- [x] hero eyebrow dashes changed to U+2E3B (two-em dash), glyph rendering checked
+- [x] hero details in two columns: When | Where, then Theme | RSVP
 - [x] Footer cut: the "fun is the way." mark and the "Yora Nordic Spa Kananaskis" link are gone — the page now ends on the closing band
 - [x] Header cut: the "fun is / the way." wordmark and the "NOVEMBER 28, 2026" date are gone — the hero opens straight on the invitation
 - [x] Check-in wording reverted to the owner's own phrasing: "Your accommodation is already taken care of, and it's my gift"
 - [x] Itinerary heading: "Vibe-based" set smaller than "The plan" (0.62em) with a touch more line-height
+- [x] Favicon is now a sunflower (golden petals, espresso centre) — public/favicon.png, old Lovable icon removed
