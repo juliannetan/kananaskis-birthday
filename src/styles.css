@@ -120,6 +120,12 @@ p { line-height: 1.7; }
 .hero-content h1 em { color: oklch(0.85 0.09 78); }
 
 /* Closing: its own tinted band with a hairline divider above. */
+.details-block { display: grid; justify-items: center; gap: 28px; padding-block: 6px 46px; text-align: center; }
+.details-block .eyebrow { margin-bottom: 4px; }
+.details-block .detail p:last-child { font-family: var(--font-display); font-size: 26px; line-height: 1.2; color: var(--foreground); }
+.details-rsvp { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 12px 26px; border: 1px solid var(--input); border-radius: 2px; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--foreground); transition: background-color .2s ease, color .2s ease; }
+.details-rsvp:hover { background: var(--primary); color: var(--primary-foreground); }
+
 .closing-band { position: relative; background: var(--closing); border-top: 1px solid color-mix(in oklab, var(--foreground) 24%, transparent); }
 .closing-band::before { content: ""; position: absolute; top: -4.5px; left: 50%; width: 8px; height: 8px; transform: translateX(-50%) rotate(45deg); background: var(--gold); }
 .closing-band .spa-pass-note { background: color-mix(in oklab, oklch(0.97 0.006 60) 62%, transparent); }
@@ -188,6 +194,8 @@ p { line-height: 1.7; }
   .timeline h3 { font-size: 32px; }
   .timeline-content > p { font-size: 15px; }
   .rsvp-section { padding-block: 110px; }
+  .details-block { grid-auto-flow: column; align-items: end; justify-content: center; gap: 60px; padding-block: 0 52px; }
+  .details-rsvp { min-height: 32px; padding: 0 20px; margin-bottom: 0; }
   .rsvp-date { margin-top: 40px; }
   .spa-pass-note { margin-top: 28px; }
   .site-footer { padding-block: 34px; }
