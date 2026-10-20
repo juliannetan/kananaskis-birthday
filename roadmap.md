@@ -67,4 +67,5 @@
 - [x] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
 - [x] Dinner note final wording: "Good food, a gentle night, i think." (owner typed it, Oct 20, 2026)
 - [x] When / Where / Theme block moved into the hero above the RSVP, ending in one rounded RSVP pill; header RSVP, hero filled button and the duplicate occasion strip all removed
-- [ ] RSVP pill on its own row below When/Where/Theme, with a filled background in a different shade
+- [x] RSVP pill on its own row below When/Where/Theme, filled with a different shade
+- [ ] two em dashes before the hero eyebrow "Well, it's that time of the year"
