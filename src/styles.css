@@ -172,7 +172,6 @@ p { line-height: 1.7; }
   h2 { font-size: 60px; }
   .hero-content { padding-top: 90px; padding-bottom: 46px; }
   .hero-content h1 { font-size: 86px; }
-  .header-date { display: inline; }
   .hero-scroll { margin-top: 40px; }
   .journey-section { padding-block: 88px; }
   .route-line { margin-top: 55px; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr); gap: 40px; }
