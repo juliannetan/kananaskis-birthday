@@ -70,4 +70,4 @@
 - [x] RSVP pill on its own row below When/Where/Theme, filled with a different shade
 - [x] two em dashes before the hero eyebrow "Well, it's that time of the year"
 - [x] drive destination renamed to "Yora Nordic Spa" (over "Arrive by 3:30pm")
-- [ ] drive note cut to two lines and aligned left
+- [x] drive note cut to two lines and aligned left
