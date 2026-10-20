@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "Around 2pm", title: "Out we go", icon: Car, note: "Leave Calgary, head west, watch the mountains get big. Can’t make 2pm? Genuinely no stress — we’ll be at the spa. Come find us." },
+  { time: "Around 2pm", title: "Arrivals", icon: Car, note: "We’re carpooling out of Calgary around 2pm. Can’t make it? No worries at all — we’ll see you at the spa." },
   { time: "By 3:30pm", title: "Spa and chill", icon: Waves, note: "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." },
   { time: "Whenever we’re ready", title: "Check in, switch off", icon: Moon, note: <><strong>Your accommodation is already taken care of, and it’s my gift</strong> — a place in Canmore, about 40 minutes from the spa; I’ll send the address closer to the date.</> },
   { time: "Until hopefully-not-so-late", title: "Dinner", icon: Check, note: "Good food, fun gentle night, i think" },
