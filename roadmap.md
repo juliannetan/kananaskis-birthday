@@ -65,4 +65,4 @@
 - [x] Itinerary sub-line "There's a direction / There's no schedule" removed
 - [x] Itinerary heading stays in view while the list scrolls on wide screens
 - [x] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
-- [x] Period added after "i think" in the dinner note (owner asked, Oct 20, 2026) — note now "Good food, gentle night, i think."
+- [x] Dinner note final wording: "Good food, a gentle night, i think." (owner typed it, Oct 20, 2026)
