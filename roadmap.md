@@ -40,3 +40,4 @@
 - [x] Itinerary trimmed to 5: "Check in", "Brunch" (with "Stay the day and leave as late as we'd like"), and the "A very slow goodbye" entry deleted
 - [ ] Push the whole batch live to funistheway.com (owner to approve)
 - [x] "Less party, more pool" eyebrow removed — the intro opens straight on "The group chat / In real life"
+- [ ] Remove the whole intro section ("The group chat / In real life" + summary line) and retarget the hero's scroll link
