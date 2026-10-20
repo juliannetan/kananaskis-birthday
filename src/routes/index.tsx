@@ -44,16 +44,12 @@ function Index() {
           <p className="eyebrow text-gold">Tyra’s birthday era, unlocked</p>
           <h1>Tyra’s birthday<br /><em>Mountain maxxing</em></h1>
           <RsvpLink />
-          <a href="#the-plan" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
+          <a href="#the-day" className="hero-scroll"><ArrowDown size={15} aria-hidden="true" /> See the plan. It’s short.</a>
         </div>
       </section>
 
       <div className="occasion-strip"><div className="page-width occasion-inner"><span>Saturday, November 28</span><span className="occasion-dot">·</span><span>Spa + sleepover</span><span className="occasion-location"><MapPin size={14} /> Kananaskis, Alberta</span></div></div>
 
-      <section id="the-plan" className="intro-section page-width">
-        <div><h2>The group chat<br /><em>In real life</em></h2></div>
-        <div className="intro-copy"><p>A spa day in Kananaskis that turns into an overnight — hot pools, dinner, and a slow Sunday.</p></div>
-      </section>
 
 
       <Journey />

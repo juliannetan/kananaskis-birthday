@@ -111,8 +111,6 @@ p { line-height: 1.7; }
 .occasion-strip { border-bottom: 1px solid var(--border); }
 .occasion-inner { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; padding-block: 22px; color: var(--muted-foreground); }
 .occasion-location { width: 100%; display: flex; align-items: center; gap: 5px; }
-.intro-section { padding-block: 72px; display: grid; gap: 28px; }
-.intro-copy { font-size: 16px; color: var(--muted-foreground); max-width: 460px; }
 .journey-section { background: var(--alpine); color: var(--alpine-foreground); padding-block: 64px; }
 .journey-heading { display: grid; gap: 22px; }
 .journey-heading > p { color: var(--alpine-muted); font-size: 15px; }
@@ -166,7 +164,6 @@ p { line-height: 1.7; }
   .hero-scroll { margin-top: 40px; }
   .occasion-inner { gap: 20px; padding-block: 25px; }
   .occasion-location { width: auto; margin-left: auto; }
-  .intro-section { grid-template-columns: 1.15fr 1fr; gap: 70px; padding-block: 100px; }
   .journey-section { padding-block: 88px; }
   .journey-heading { grid-template-columns: 1fr 1fr; align-items: end; }
   .journey-heading > p { text-align: right; }
