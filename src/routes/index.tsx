@@ -52,7 +52,7 @@ function Index() {
 
       <section id="the-plan" className="intro-section page-width">
         <div><h2>The group chat<br /><em>In real life</em></h2></div>
-        <div className="intro-copy"><p>We’re taking Tyra to Yora Nordic Spa Kananaskis — the group chat’s one honest attempt at being wellness people.</p><p>The plan, in full: leave Calgary around 2pm, at the spa by 3:30pm, soak as long as we like. Then dinner, a night in Canmore, and a slow Sunday — maybe brunch, maybe a little hike, whatever floats. That’s it. That’s the itinerary.</p><span className="tiny-signoff">With love, the birthday crew</span></div>
+        <div className="intro-copy"><p>A spa day in Kananaskis that turns into an overnight — hot pools, dinner, and a slow Sunday.</p></div>
       </section>
 
 
