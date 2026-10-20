@@ -29,4 +29,5 @@
 - [x] Periods dropped across every heading and caption on the invite — "The plan / Vibe-based", "The group chat / In real life", "Go west", "No rush / No drive home tonight", plus eyebrows, timeline titles and the footer line
 - [x] Accommodation flipped to "covered": the host's gift, a stay in Canmore ~40 min from the spa, address sent closer to the date — page, Tally form and facts file all say it
 - [x] Footer sign-off swapped to "See you in the Mountains / November 28 – 29 · Tyra's Birthday"
-- [x] Check-in line reworded to "Your accommodation is already taken care of, and it's my gift…" on the page and the RSVP form
+- [x] Check-in line reworded to "Your accommodation is already taken care of, and it's my gift…" on the page and the RSVP form, with that phrase bolded
+- [x] "Stay a little longer / No rush / Sleeping in Canmore" overnight section cut — the evening photo is off the page
