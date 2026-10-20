@@ -194,7 +194,7 @@ p { line-height: 1.7; }
   .timeline-content > p { font-size: 15px; }
   .rsvp-section { padding-block: 110px; }
   .details-block { grid-auto-flow: column; align-items: end; justify-content: center; gap: 60px; padding-block: 0 52px; }
-  .hero-content .details-block { grid-template-columns: 1fr 1fr; align-items: end; gap: 22px 46px; padding-block: 34px 0; }
+  .hero-content .details-block { grid-auto-flow: row; grid-template-columns: 1fr 1fr; align-items: end; gap: 22px 46px; padding-block: 34px 0; }
   .hero-content .details-block .detail p:last-child { font-size: 21px; }
   .hero-content .details-rsvp { min-height: 42px; padding: 10px 26px; }
   .rsvp-date { margin-top: 40px; }
