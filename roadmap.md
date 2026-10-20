@@ -57,12 +57,12 @@
 - [x] Date line "November 28 – 29 · Tyra's Birthday" enlarged (12px → 14px)
 - [x] Hero eyebrow "Well, it's that time of the year" enlarged (11px → 13px, hero only — other eyebrows untouched)
 - [x] Background/palette retinted: more luxurious, feminine but unisex — Hermès / Dior / high-fashion feel
-- [ ] Cocoa retint rejected ("dont like this color, make it lighter and different") — now going light: pale shell/ivory base, espresso ink text, antique gold accent
-- [ ] Divider + its own tinted band above "See you in the Mountains." (band in, divider needs to be clearly visible)
-- [ ] Drive heading block removed ("The drive" + "Calgary to Yora Nordic Spa Kananaskis") — the section opens on the route line
-- [ ] Drive note "Can't make the 2pm send-off? … we'll be waiting for you at the spa." removed (duplicates the Arrivals entry)
-- [ ] Whitespace tightened mobile-first + footer seam cleaned so the page ends in one panel
-- [ ] Itinerary sub-line "There's a direction / There's no schedule" removed
-- [ ] Itinerary heading stays in view while the list scrolls on wide screens
-- [ ] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
-- [ ] Period added after "i think" in the dinner note (owner asked, Oct 20, 2026) — note now "Good food, gentle night, i think."
+- [x] Cocoa retint rejected ("dont like this color, make it lighter and different") — now going light: pale shell/ivory base, espresso ink text, antique gold accent
+- [x] Divider + its own tinted band above "See you in the Mountains." (band in, divider needs to be clearly visible)
+- [x] Drive heading block removed ("The drive" + "Calgary to Yora Nordic Spa Kananaskis") — the section opens on the route line
+- [x] Drive note "Can't make the 2pm send-off? … we'll be waiting for you at the spa." removed (duplicates the Arrivals entry)
+- [x] Whitespace tightened mobile-first + footer seam cleaned so the page ends in one panel
+- [x] Itinerary sub-line "There's a direction / There's no schedule" removed
+- [x] Itinerary heading stays in view while the list scrolls on wide screens
+- [x] Occasion strip now "November 28 – 29 · Spa + mountain maxxing"
+- [x] Period added after "i think" in the dinner note (owner asked, Oct 20, 2026) — note now "Good food, gentle night, i think."
