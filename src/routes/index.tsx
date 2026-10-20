@@ -33,10 +33,6 @@ function Index() {
       <section className="birthday-hero">
         <img src={hero} alt="Steaming outdoor spa pools surrounded by snowy Kananaskis pines" width={1920} height={1088} fetchPriority="high" className="hero-photo" />
         <div className="hero-veil" />
-        <header className="hero-header page-width">
-          <a className="wordmark" href="#" aria-label="Fun Is the Way, back to top">fun is<br /><span>the way.</span></a>
-          <div className="header-right"><span className="header-date">NOVEMBER 28, 2026</span></div>
-        </header>
         <div className="hero-content page-width animate-rise">
           <p className="eyebrow text-gold">⸻ Well, it’s that time of the year</p>
           <h1>Tyra’s birthday 🌻<br /><em>In the Mountains</em></h1>
@@ -58,7 +54,7 @@ function Index() {
 
       <div className="closing-band"><section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><span className="rsvp-date"><strong>See you in the Mountains.</strong><span>November 28 – 29 · Tyra’s Birthday</span></span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 
-      <footer className="site-footer page-width"><div className="footer-main"><a href="#" className="wordmark">fun is<br /><span>the way.</span></a><a href="https://knordicspa.com/" target="_blank" rel="noreferrer" className="footer-spa">Yora Nordic Spa Kananaskis <ArrowUpRight size={14} /></a></div></footer></div>
+      </div>
     </main>
   );
 }
