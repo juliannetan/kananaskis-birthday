@@ -22,7 +22,7 @@ const timeline = [
   { time: "Around 2pm", title: "Arrivals", icon: Car, note: "We’re carpooling out of Calgary around 2pm. Can’t make it? No worries at all — we’ll see you at the spa." },
   { time: "By 3:30pm", title: "Spa and chill", icon: Waves, note: "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." },
   { time: "Whenever we’re ready", title: "Check in", icon: Moon, note: <><strong>Your accommodation is already taken care of, and it’s my gift</strong> — a place in Canmore, about 40 minutes from the spa; I’ll send the address closer to the date.</> },
-  { time: "Until hopefully-not-so-late", title: "Dinner", icon: Check, note: "Good food, fun gentle night, i think." },
+  { time: "Until hopefully-not-so-late", title: "Dinner", icon: Check, note: "Good food, gentle night, i think." },
   { time: "Sunday, November 29", title: "Brunch", icon: Coffee, note: "Really loose — maybe brunch, maybe a short hike. Stay the day and leave as late as we’d like." },
 ];
 
