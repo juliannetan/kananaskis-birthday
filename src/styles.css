@@ -102,7 +102,7 @@ p { line-height: 1.7; }
 .hero-content { position: relative; margin-top: auto; padding-top: 56px; padding-bottom: max(35px, calc(env(safe-area-inset-bottom) + 18px)); }
 .hero-content .eyebrow { font-size: 13px; }
 .hero-content h1 { font-size: min(48px, 11.9vw); line-height: 1.12; max-width: 830px; }
-.hero-content h1 em { color: var(--gold); font-size: 0.62em; }
+.hero-content h1 em { color: var(--gold); font-size: 0.62em; font-style: normal; }
 .hero-scroll { display: flex; align-items: center; gap: 10px; font-size: 12px; color: oklch(0.86 0.02 60); margin-top: 24px; min-height: 32px; }
 
 /* The hero sits on the photograph, so it keeps its own light ink. */
