@@ -35,12 +35,11 @@
 - [x] Footer sign-off "See you in the Mountains / November 28 – 29 · Tyra's Birthday" removed — the footer is just the wordmark and the spa link
 - [x] Check-in line now ends "…about 40 minutes from the spa; I'll send the address closer to the date" — "Drop your bags, get comfortable" cut
 - [x] Spa timeline entry is now "Spa and chill" with "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." (replaces "Robes on, world off")
-- [x] Hero tagline "One day in the mountains. One cozy overnight." removed — the hero is now the eyebrow, the headline, the RSVP button and the scroll link
+- [x] Hero scroll link now reads just "See the plan" (period dropped Oct 20, 2026)
 - [x] First itinerary entry is now "Arrivals" — carpooling out of Calgary around 2pm, missing it is no worries, we'll see you at the spa
 - [x] Itinerary trimmed to 5: "Check in", "Brunch" (with "Stay the day and leave as late as we'd like"), and the "A very slow goodbye" entry deleted
 - [ ] Push the whole batch live to funistheway.com (owner to approve)
 - [x] "Less party, more pool" eyebrow removed — the intro opens straight on "The group chat / In real life"
-- [x] Intro section ("The group chat / In real life" + summary line) removed entirely — hero scroll link retargeted to the itinerary
 - [x] Drive heading "Go west" replaced with "Into the Mountains"
 - [x] Tally form description simplified to the RSVP-only wording with the 😉 and 🌻 lines; spa-pass note and all questions kept
 - [x] Tally "Dietary needs, a ride, or anything else?" question removed — the form now ends at "Arriving later? Rough time?"
