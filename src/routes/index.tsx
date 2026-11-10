@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Tyra’s Birthday · November 28 — Fun Is the Way" },
-      { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around 2pm, a long soak, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
+      { name: "description", content: "A birthday escape to Yora Nordic Spa Kananaskis. November 28, 2026: Calgary around 12:30pm, a 2pm spa session, dinner and a cozy overnight. RSVP for Tyra’s birthday." },
       { property: "og:title", content: "Tyra’s Birthday 🌻 — In the Mountains" },
       { property: "og:description", content: "November 28 · Calgary to Yora Nordic Spa Kananaskis · A chill birthday overnight with the group chat. Stay in Canmore covered as a birthday gift. RSVP with Tally." },
       { property: "og:type", content: "website" },
@@ -19,8 +19,8 @@ export const Route = createFileRoute("/")({
 });
 
 const timeline = [
-  { time: "Around 2pm", title: "Departures", icon: Car, note: "We’re carpooling out of Calgary around 2pm. Can’t make it? No worries at all — we’ll see you at the spa." },
-  { time: "By 3:30pm", title: "Spa and chill", icon: Waves, note: "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." },
+  { time: `Around ${invitation.departureLabel}`, title: "Departures", icon: Car, note: `We’re carpooling out of Calgary around ${invitation.departureLabel}. Can’t make it? No worries at all — we’ll see you at the spa.` },
+  { time: `By ${invitation.spaSlotLabel}`, title: "Spa and chill", icon: Waves, note: "Towels, spa shoes, robe, and lockers provided. Sun hopefully too." },
   { time: "Whenever we’re ready", title: "Check in", icon: Moon, note: <><strong>Your accommodation is already taken care of, and it’s my gift</strong> — a place in Canmore, about 40 minutes from the spa; I’ll send the address closer to the date.</> },
   { time: "Until hopefully-not-so-late", title: "Dinner", icon: Check, note: "Good food, a gentle night, I think." },
   { time: "Sunday, November 29", title: "Brunch", icon: Coffee, note: "Really loose — maybe brunch, maybe a short hike. Stay the day and leave as late as we’d like." },
@@ -52,7 +52,7 @@ function Index() {
 
 
 
-      <div className="closing-band"><section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><span className="rsvp-date"><strong>See you in the Mountains.</strong><span>November 28 – 29 · Tyra’s Birthday</span></span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Only the 4pm slots are left, so grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the 4pm slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
+      <div className="closing-band"><section id="rsvp" className="rsvp-section page-width"><Mountain className="rsvp-mountain" size={40} strokeWidth={1} aria-hidden="true" /><span className="rsvp-date"><strong>See you in the Mountains.</strong><span>November 28 – 29 · Tyra’s Birthday</span></span><div className="spa-pass-note"><strong>One thing to book: your spa pass, $173, directly with Yora.</strong> Book the {invitation.spaSlotLabel} slot, and grab yours as soon as you’re in. It’s fully refundable up to 24 hours before — a “maybe” risks nothing. <a href={invitation.spaBookingUrl} target="_blank" rel="noreferrer">Book the {invitation.spaSlotLabel} slot <ArrowUpRight size={13} aria-hidden="true" /></a></div></section>
 
       </div>
     </main>
@@ -60,5 +60,5 @@ function Index() {
 }
 
 function Journey() {
-  return <section className="journey-section" id="the-drive"><div className="page-width"><div className="route-line"><div className="route-origin"><MapPin size={24} strokeWidth={1.2} /><h3>Calgary</h3><span>Leave around 2pm</span></div><div className="route-middle"><span>HWY 1 → HWY 40 SOUTH</span><div className="route-track"><Car size={22} /><ArrowRight size={22} /></div><span>~100 KM · ~1 HR 15 MIN</span></div><div className="route-destination"><Mountain size={24} strokeWidth={1.2} /><h3>Yora Nordic Spa</h3><span>Arrive by 3:30pm</span></div></div><div className="drive-note"><span>Same place, new name. Google still lists it as Kananaskis Nordic Spa.<br />Kananaskis charges a conservation pass — $15 per vehicle per day. Carpools are a W.</span></div><div className="map-frame"><iframe title="Map from Calgary to Yora Nordic Spa Kananaskis" src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Yora+Nordic+Spa,+Kananaskis+Village,+AB&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><Button asChild variant="link" className="directions-link"><a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Yora+Nordic+Spa,+Kananaskis+Village,+AB" target="_blank" rel="noreferrer">Open directions <ArrowUpRight /></a></Button></div></section>;
+  return <section className="journey-section" id="the-drive"><div className="page-width"><div className="route-line"><div className="route-origin"><MapPin size={24} strokeWidth={1.2} /><h3>Calgary</h3><span>Leave around {invitation.departureLabel}</span></div><div className="route-middle"><span>HWY 1 → HWY 40 SOUTH</span><div className="route-track"><Car size={22} /><ArrowRight size={22} /></div><span>~100 KM · ~1 HR 15 MIN</span></div><div className="route-destination"><Mountain size={24} strokeWidth={1.2} /><h3>Yora Nordic Spa</h3><span>Arrive by {invitation.spaSlotLabel}</span></div></div><div className="drive-note"><span>Same place, new name. Google still lists it as Kananaskis Nordic Spa.<br />Kananaskis charges a conservation pass — $15 per vehicle per day. Carpools are a W.</span></div><div className="map-frame"><iframe title="Map from Calgary to Yora Nordic Spa Kananaskis" src="https://www.google.com/maps?saddr=Calgary,+AB&daddr=Yora+Nordic+Spa,+Kananaskis+Village,+AB&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><Button asChild variant="link" className="directions-link"><a href="https://www.google.com/maps/dir/?api=1&origin=Calgary,+AB&destination=Yora+Nordic+Spa,+Kananaskis+Village,+AB" target="_blank" rel="noreferrer">Open directions <ArrowUpRight /></a></Button></div></section>;
 }
