@@ -77,3 +77,4 @@
 - [x] Check-in wording reverted to the owner's own phrasing: "Your accommodation is already taken care of, and it's my gift"
 - [x] Itinerary heading: "Vibe-based" set smaller than "The plan" (0.62em) with a touch more line-height
 - [x] Favicon is now a sunflower (golden petals, espresso centre) — public/favicon.png, old Lovable icon removed
+- [ ] Update departure to 12:30pm, spa and booking prompts to 2pm, and Tally
