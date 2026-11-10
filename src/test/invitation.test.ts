@@ -6,11 +6,13 @@ describe('Birthday invitation requirements', () => {
     expect(invitation.date).toBe('2026-11-28');
     expect(new Date(`${invitation.date}T12:00:00Z`).getUTCDay()).toBe(6);
   });
-  it('leaves Calgary around 2pm and reaches the spa by 3:30pm', () => {
-    expect(invitation.departureHour).toBe(14);
-    const minutesAtSpa = invitation.arrivalHour * 60 + invitation.arrivalMinute - invitation.departureHour * 60;
-    expect(invitation.arrivalHour).toBe(15);
-    expect(invitation.arrivalMinute).toBe(30);
+  it('leaves Calgary around 12:30pm and reaches the spa by 2pm', () => {
+    expect(invitation.departureHour).toBe(12);
+    expect(invitation.departureMinute).toBe(30);
+    expect(invitation.departureLabel).toBe('12:30pm');
+    const minutesAtSpa = invitation.arrivalHour * 60 + invitation.arrivalMinute - (invitation.departureHour * 60 + invitation.departureMinute);
+    expect(invitation.arrivalHour).toBe(14);
+    expect(invitation.arrivalMinute).toBe(0);
     expect(minutesAtSpa).toBeGreaterThanOrEqual(75);
     expect(minutesAtSpa).toBeLessThanOrEqual(105);
   });
@@ -26,10 +28,10 @@ describe('Birthday invitation requirements', () => {
     expect(invitation.spaBookingUrl).toMatch(/^https:\/\/book\.onagilysys\.com\//);
     expect(invitation.spaBookingUrl).toContain('date=2026-11-28');
   });
-  it('points guests at the only passes left, the 4pm slots', () => {
-    expect(invitation.spaSlotHour).toBe(16);
-    expect(invitation.spaSlotLabel).toBe('4pm');
-    expect(invitation.spaSlotHour).toBeGreaterThan(invitation.arrivalHour);
+  it('prompts guests to book the 2pm spa slot', () => {
+    expect(invitation.spaSlotHour).toBe(14);
+    expect(invitation.spaSlotLabel).toBe('2pm');
+    expect(invitation.spaSlotHour).toBe(invitation.arrivalHour);
   });
   it('sends RSVP to the published Tally form', () => {
     expect(invitation.tallyUrl).toBe('https://tally.so/r/RWKekP');
